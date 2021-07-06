@@ -55,14 +55,14 @@ public class Array {
      *
      * @param e 添加的元素
      */
-    public void addFirst(int e){
-        add(e,0);
+    public void addFirst(int e) {
+        add(e, 0);
     }
 
     /**
      * 在第 index 位置插入一个新的元素 e
      *
-     * @param e 添加的元素
+     * @param e     添加的元素
      * @param index 添加元素的索引
      */
     public void add(int e, int index) {
@@ -80,4 +80,40 @@ public class Array {
         size++;
     }
 
+    /**
+     * @param index 索引
+     * @return 获取 index 处的元素
+     */
+    public int get(int index) {
+        if (index < 0 || index >= size) {
+            throw new IllegalArgumentException("Get failed. Index is illegal");
+        }
+        return data[index];
+    }
+
+    /**
+     * @param e     更新后的元素
+     * @param index 将索引为 index 位置的元素 更新为 e
+     */
+    public void set(int e, int index) {
+        if (index < 0 || index >= size) {
+            throw new IllegalArgumentException("Get failed. Index is illegal");
+        }
+        data[index] = e;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(String.format("Array: size = %d, capacity = %d\n", size, data.length));
+        sb.append("[");
+        for (int i = 0; i < size; i++) {
+            sb.append(data[i]);
+            if (i != size - 1) {
+                sb.append(", ");
+            }
+        }
+        sb.append("]");
+        return sb.toString();
+    }
 }
