@@ -102,6 +102,153 @@ public class Array {
         data[index] = e;
     }
 
+    /**
+     * @param e 是否包含 e
+     * @return 查找当前数组是否包含元素 e；如果包含元素 e 则返回 true，如果不包含元素 e 则返回 false
+     */
+    public boolean contains(int e) {
+        return find(e) != -1;
+    }
+
+    /**
+     * @param e 查找的元素 e
+     * @return 查找数组当中元素 e 所在的<strong>最近索引</strong>，如果不存在元素 e，则返回 -1
+     * <p>
+     * ex:
+     * data = [3,2,4,2,5]
+     * find(2)
+     * return : 1
+     * find(6)
+     * return : -1
+     * </p>
+     */
+    public int find(int e) {
+        for (int i = 0; i < size; i++) {
+            if (data[i] == e) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    /**
+     * @param e
+     * @return 返回数组中元素 e 所有的索引位置,如果不存在，则返回空数组
+     * <p>
+     * ex:
+     * data = [3,2,4,2,5]
+     * findAll(2)
+     * return : [1,3]
+     * findAll(6)
+     * return : []
+     * </p>
+     */
+    public int[] findAll(int e) {
+        int count = getElementCount(e);
+        if (count == 0) {
+            return new int[]{};
+        }
+        int[] ret = new int[count];
+        int retIndex = 0;
+        for (int i = 0; i < size; i++) {
+            if (data[i] == e) {
+                ret[retIndex++] = i;
+            }
+        }
+        return ret;
+    }
+
+    /**
+     * @param index 删除 index 位置的元素
+     * @return 返回删除的元素值
+     */
+    public int remove(int index) {
+        if (size <= 0) {
+            throw new IllegalArgumentException("Remove failed. Array is empty!");
+        }
+        if (index < 0 || index >= size) {
+            throw new IllegalArgumentException("Delete failed. Index is illegal!");
+        }
+        int ret = data[index];
+        for (int i = index; i < size - 1; i++) {
+            data[i] = data[i + 1];
+        }
+        size--;
+        return ret;
+    }
+
+
+    /**
+     * @param e 如果数组中存在元素 e，则删除最近的元素 e.
+     *          <p>
+     *          ex:
+     *          data = [3,2,4,2,5]
+     *          removeElement(2)
+     *          return: true
+     *          data = [3,4,2,5]
+     *          </>
+     */
+    public boolean removeElement(int e) {
+        int index = find(e);
+        if (index != -1) {
+            remove(index);
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * @param e
+     * @return 如果数组中存在元素 e，则将数组中 所有值为 e 的元素删除
+     *
+     * <p>
+     * ex:
+     * data = [3,2,4,2,5]
+     * removeAllElement(2)
+     * return: true
+     * data = [3,4,5]
+     * </p>
+     */
+    public boolean removeAllElements(int e) {
+        int count = getElementCount(e);
+        if (count > 0) {
+            for (int i = 0; i < count; i++) {
+                removeElement(e);
+            }
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * @param e
+     * @return 返回当前数组中，元素 e 的个数
+     */
+    public int getElementCount(int e) {
+        int ret = 0;
+        for (int i = 0; i < size; i++) {
+            if (data[i] == e) {
+                ret++;
+            }
+        }
+        return ret;
+    }
+
+    /**
+     * @return 从数组中删除第一个元素，返回删除的元素
+     */
+    public int removeFirst() {
+        return remove(0);
+    }
+
+    /**
+     * @return 从数组中删除最后一个元素，返回删除的元素
+     */
+    public int removeLast() {
+        return remove(size - 1);
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
