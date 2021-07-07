@@ -106,6 +106,15 @@ class ArrayTest {
 
     @Test
     void testResize() {
-        Array<Integer> array = new Array<>();
+        Array<Integer> array = new Array<>(); // init capacity = 10
+        for (int i = 0; i < 10; i++) {
+            array.addLast(1);
+        }
+        array.addLast(1);//  -----> resize capacity = 20
+        assertEquals(array.getCapacity(), 20); // size = 11 capacity = 20
+        for (int i = 0; i < 6; i++) {
+            array.removeLast();
+        }
+        assertEquals(array.getCapacity(), 10);
     }
 }

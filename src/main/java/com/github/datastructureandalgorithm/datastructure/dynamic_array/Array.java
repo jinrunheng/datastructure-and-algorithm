@@ -178,6 +178,12 @@ public class Array<E> {
         }
         size--;
         data[size] = null; // loitering objects
+
+        // lazy
+        if (size == data.length / 4) {
+            resize(data.length / 2);
+        }
+
         return ret;
     }
 
@@ -269,6 +275,11 @@ public class Array<E> {
         return sb.toString();
     }
 
+    /**
+     * 扩容/缩容方法
+     *
+     * @param newCapacity 新的数组的容量
+     */
     private void resize(int newCapacity) {
         E[] newData = (E[]) new Object[newCapacity];
         for (int i = 0; i < size; i++) {
