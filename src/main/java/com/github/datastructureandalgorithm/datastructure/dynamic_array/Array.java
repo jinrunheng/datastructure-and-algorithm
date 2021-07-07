@@ -1,15 +1,16 @@
 package com.github.datastructureandalgorithm.datastructure.dynamic_array;
 
-public class Array {
 
-    private int[] data;
+public class Array<E> {
+
+    private E[] data;
     private int size;
 
     /**
      * @param capacity 用户传入 capacity 指定数组的容量
      */
     public Array(int capacity) {
-        data = new int[capacity];
+        data = (E[]) new Object[capacity];
         size = 0;
     }
 
@@ -46,7 +47,7 @@ public class Array {
      *
      * @param e 添加的元素
      */
-    public void addLast(int e) {
+    public void addLast(E e) {
         add(e, size);
     }
 
@@ -55,7 +56,7 @@ public class Array {
      *
      * @param e 添加的元素
      */
-    public void addFirst(int e) {
+    public void addFirst(E e) {
         add(e, 0);
     }
 
@@ -65,12 +66,14 @@ public class Array {
      * @param e     添加的元素
      * @param index 添加元素的索引
      */
-    public void add(int e, int index) {
-        if (size == data.length) {
-            throw new IllegalArgumentException("add failed. Array is full");
-        }
+    public void add(E e, int index) {
+
         if (index > size || index < 0) {
-            throw new IllegalArgumentException("index out of bounds");
+            throw new IllegalArgumentException("Add failed. Require index >= 0 and index <= size");
+        }
+
+        if (size == data.length) {
+            resize(data.length * 2);
         }
 
         for (int i = size - 1; i >= index; i--) {
@@ -84,7 +87,7 @@ public class Array {
      * @param index 索引
      * @return 获取 index 处的元素
      */
-    public int get(int index) {
+    public E get(int index) {
         if (index < 0 || index >= size) {
             throw new IllegalArgumentException("Get failed. Index is illegal");
         }
@@ -95,7 +98,7 @@ public class Array {
      * @param e     更新后的元素
      * @param index 将索引为 index 位置的元素 更新为 e
      */
-    public void set(int e, int index) {
+    public void set(E e, int index) {
         if (index < 0 || index >= size) {
             throw new IllegalArgumentException("Get failed. Index is illegal");
         }
@@ -106,7 +109,7 @@ public class Array {
      * @param e 是否包含 e
      * @return 查找当前数组是否包含元素 e；如果包含元素 e 则返回 true，如果不包含元素 e 则返回 false
      */
-    public boolean contains(int e) {
+    public boolean contains(E e) {
         return find(e) != -1;
     }
 
@@ -122,9 +125,9 @@ public class Array {
      * return : -1
      * </p>
      */
-    public int find(int e) {
+    public int find(E e) {
         for (int i = 0; i < size; i++) {
-            if (data[i] == e) {
+            if (data[i].equals(e)) {
                 return i;
             }
         }
@@ -143,7 +146,7 @@ public class Array {
      * return : []
      * </p>
      */
-    public int[] findAll(int e) {
+    public int[] findAll(E e) {
         int count = getElementCount(e);
         if (count == 0) {
             return new int[]{};
@@ -162,18 +165,19 @@ public class Array {
      * @param index 删除 index 位置的元素
      * @return 返回删除的元素值
      */
-    public int remove(int index) {
+    public E remove(int index) {
         if (size <= 0) {
             throw new IllegalArgumentException("Remove failed. Array is empty!");
         }
         if (index < 0 || index >= size) {
             throw new IllegalArgumentException("Delete failed. Index is illegal!");
         }
-        int ret = data[index];
+        E ret = data[index];
         for (int i = index; i < size - 1; i++) {
             data[i] = data[i + 1];
         }
         size--;
+        data[size] = null; // loitering objects
         return ret;
     }
 
@@ -188,7 +192,7 @@ public class Array {
      *          data = [3,4,2,5]
      *          </>
      */
-    public boolean removeElement(int e) {
+    public boolean removeElement(E e) {
         int index = find(e);
         if (index != -1) {
             remove(index);
@@ -209,7 +213,7 @@ public class Array {
      * data = [3,4,5]
      * </p>
      */
-    public boolean removeAllElements(int e) {
+    public boolean removeAllElements(E e) {
         int count = getElementCount(e);
         if (count > 0) {
             for (int i = 0; i < count; i++) {
@@ -225,10 +229,10 @@ public class Array {
      * @param e
      * @return 返回当前数组中，元素 e 的个数
      */
-    public int getElementCount(int e) {
+    public int getElementCount(E e) {
         int ret = 0;
         for (int i = 0; i < size; i++) {
-            if (data[i] == e) {
+            if (data[i].equals(e)) {
                 ret++;
             }
         }
@@ -238,16 +242,17 @@ public class Array {
     /**
      * @return 从数组中删除第一个元素，返回删除的元素
      */
-    public int removeFirst() {
+    public E removeFirst() {
         return remove(0);
     }
 
     /**
      * @return 从数组中删除最后一个元素，返回删除的元素
      */
-    public int removeLast() {
+    public E removeLast() {
         return remove(size - 1);
     }
+
 
     @Override
     public String toString() {
@@ -262,5 +267,13 @@ public class Array {
         }
         sb.append("]");
         return sb.toString();
+    }
+
+    private void resize(int newCapacity) {
+        E[] newData = (E[]) new Object[newCapacity];
+        for (int i = 0; i < size; i++) {
+            newData[i] = data[i];
+        }
+        data = newData;
     }
 }

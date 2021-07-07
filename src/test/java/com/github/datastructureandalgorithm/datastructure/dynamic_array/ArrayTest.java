@@ -8,7 +8,7 @@ class ArrayTest {
 
     @Test
     void getSize() {
-        Array array = new Array();
+        Array<Integer> array = new Array();
         assertEquals(array.getSize(), 0);
         array.addLast(1);
         assertEquals(array.getSize(), 1);
@@ -16,15 +16,15 @@ class ArrayTest {
 
     @Test
     void getCapacity() {
-        Array array1 = new Array();
-        Array array2 = new Array(20);
+        Array<Integer> array1 = new Array();
+        Array<Integer> array2 = new Array(20);
         assertEquals(array1.getCapacity(), 10);
         assertEquals(array2.getCapacity(), 20);
     }
 
     @Test
     void isEmpty() {
-        Array array = new Array();
+        Array<Integer> array = new Array();
         assertTrue(array.isEmpty());
         array.addLast(1);
         assertFalse(array.isEmpty());
@@ -33,7 +33,7 @@ class ArrayTest {
 
     @Test
     void addFirstAndLast() {
-        Array array = new Array(20);
+        Array<Integer> array = new Array(20);
         for (int i = 0; i < 10; i++) {
             array.addLast(1);
         }
@@ -43,11 +43,18 @@ class ArrayTest {
 
     @Test
     void add() {
+        Array<Integer> array = new Array<>(20);
+        for (int i = 0; i < 10; i++) {
+            array.addLast(i);
+        }
+        array.add(100, 5);
+        assertEquals(array.get(5), 100);
+        assertEquals(array.getSize(), 11);
     }
 
     @Test
     void testToString() {
-        Array array = new Array(20);
+        Array<Integer> array = new Array(20);
         for (int i = 0; i < 10; i++) {
             array.addLast(i);
         }
@@ -58,7 +65,7 @@ class ArrayTest {
 
     @Test
     void testRemoveAllElements() {
-        Array array = new Array();
+        Array<Integer> array = new Array();
         array.addLast(3);
         array.addLast(2);
         array.addLast(4);
@@ -71,7 +78,7 @@ class ArrayTest {
 
     @Test
     void testRemoveElement() {
-        Array array = new Array();
+        Array<Integer> array = new Array();
         array.addLast(3);
         array.addLast(2);
         array.addLast(4);
@@ -84,7 +91,7 @@ class ArrayTest {
 
     @Test
     void testFindAll() {
-        Array array = new Array();
+        Array<Integer> array = new Array();
         array.addLast(3);
         array.addLast(2);
         array.addLast(4);
@@ -95,5 +102,10 @@ class ArrayTest {
         assertEquals(find[0], 1);
         assertEquals(find[1], 3);
         assertEquals(0, array.findAll(6).length);
+    }
+
+    @Test
+    void testResize() {
+        Array<Integer> array = new Array<>();
     }
 }
