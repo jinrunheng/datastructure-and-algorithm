@@ -180,7 +180,7 @@ public class Array<E> {
         data[size] = null; // loitering objects
 
         // lazy
-        if (size == data.length / 4) {
+        if (size == data.length / 4 && data.length / 2 != 0) {
             resize(data.length / 2);
         }
 
