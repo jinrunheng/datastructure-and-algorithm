@@ -95,6 +95,20 @@ public class Array<E> {
     }
 
     /**
+     * @return 获取数组中最后一个元素
+     */
+    public E getLast() {
+        return get(size - 1);
+    }
+
+    /**
+     * @return 获取数组中的第一个元素
+     */
+    public E getFirst() {
+        return get(0);
+    }
+
+    /**
      * @param e     更新后的元素
      * @param index 将索引为 index 位置的元素 更新为 e
      */
