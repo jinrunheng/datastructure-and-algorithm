@@ -15,7 +15,6 @@ public class ArrayStack<E> implements Stack<E> {
     }
 
     /**
-     *
      * @return 栈的底层实现的动态数组的容量大小
      */
     public int getCapacity() {
@@ -43,7 +42,7 @@ public class ArrayStack<E> implements Stack<E> {
      */
     @Override
     public E peek() {
-        return array.get(array.getSize() - 1);
+        return array.getLast();
     }
 
     /**
@@ -55,11 +54,26 @@ public class ArrayStack<E> implements Stack<E> {
     }
 
     /**
-     *
      * @return 栈是否为空
      */
     @Override
     public boolean isEmpty() {
         return array.isEmpty();
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Stack：");
+        sb.append("\n");
+
+        for (int i = array.getSize() - 1; i >= 0; i--) {
+            sb.append("[" + array.get(i) + "]");
+
+            if (i != 0) {
+                sb.append("\n");
+            }
+        }
+        return sb.toString();
     }
 }
