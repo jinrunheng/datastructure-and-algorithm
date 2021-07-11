@@ -14,10 +14,18 @@ public class LoopQueue<E> implements Queue<E> {
         this(10);
     }
 
+    /**
+     *
+     * @return 数组的容量
+     */
     public int getCapacity() {
         return data.length - 1;
     }
 
+    /**
+     *
+     * @param newCapacity 新的容量
+     */
     private void resize(int newCapacity) {
         E[] newData = (E[]) new Object[newCapacity + 1];
         for (int i = 0; i < getSize(); i++) {
@@ -28,6 +36,10 @@ public class LoopQueue<E> implements Queue<E> {
         tail = getSize() - 1;
     }
 
+    /**
+     *
+     * @param e 入队元素
+     */
     @Override
     public void enqueue(E e) {
         if (isFull()) {
@@ -37,10 +49,18 @@ public class LoopQueue<E> implements Queue<E> {
         tail = (tail + 1) % data.length;
     }
 
+    /**
+     *
+     * @return 当前队列是否为满
+     */
     private boolean isFull() {
         return front == (tail + 1) % data.length;
     }
 
+    /**
+     *
+     * @return 出队元素
+     */
     @Override
     public E dequeue() {
         E ret = data[front];
@@ -52,6 +72,10 @@ public class LoopQueue<E> implements Queue<E> {
         return ret;
     }
 
+    /**
+     *
+     * @return 队首元素
+     */
     @Override
     public E getFront() {
         if (getSize() == 0) {
@@ -60,6 +84,10 @@ public class LoopQueue<E> implements Queue<E> {
         return data[front];
     }
 
+    /**
+     *
+     * @return 当前队列元素个数
+     */
     @Override
     public int getSize() {
         if (tail < front) {
@@ -69,6 +97,10 @@ public class LoopQueue<E> implements Queue<E> {
         }
     }
 
+    /**
+     *
+     * @return 队列是否为空
+     */
     @Override
     public boolean isEmpty() {
         return front == tail;
