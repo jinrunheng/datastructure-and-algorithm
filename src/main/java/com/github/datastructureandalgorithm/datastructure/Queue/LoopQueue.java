@@ -30,14 +30,15 @@ public class LoopQueue<E> implements Queue<E> {
 
     @Override
     public void enqueue(E e) {
-        if (getSize() < data.length - 1) {
-            data[(tail + 1) % data.length] = e;
-            tail = (tail + 1) % data.length;
-        } else {
-            resize(data.length * 2);
-            data[getSize()] = e;
-            tail++;
+        if (isFull()) {
+            resize(2 * getCapacity());
         }
+        data[tail] = e;
+        tail = (tail + 1) % data.length;
+    }
+
+    private boolean isFull() {
+        return front == (tail + 1) % data.length;
     }
 
     @Override
@@ -61,12 +62,10 @@ public class LoopQueue<E> implements Queue<E> {
 
     @Override
     public int getSize() {
-        if (tail == front) {
-            return 0;
-        } else if (tail < front) {
-            return tail + data.length - front + 1;
+        if (tail < front) {
+            return tail + data.length - front;
         } else {
-            return tail - front + 1;
+            return tail - front;
         }
     }
 
@@ -78,11 +77,11 @@ public class LoopQueue<E> implements Queue<E> {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("LoopQueue size:%d,capacity:%d\n", getSize(), getCapacity());
+        sb.append(String.format("LoopQueue size:%d,capacity:%d\n", getSize(), getCapacity()));
         sb.append("front[");
         for (int i = front; i != tail; i = (i + 1) % data.length) {
             sb.append(data[i]);
-            if (i != tail) {
+            if ((i + 1) % data.length != tail) {
                 sb.append(", ");
             }
         }
