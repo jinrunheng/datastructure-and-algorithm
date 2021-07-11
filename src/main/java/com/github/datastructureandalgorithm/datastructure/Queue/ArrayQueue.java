@@ -15,6 +15,13 @@ public class ArrayQueue<E> implements Queue<E> {
     }
 
     /**
+     * @return 底层数组的容量
+     */
+    public int getCapacity() {
+        return array.getCapacity();
+    }
+
+    /**
      * @param e 入队元素
      */
     @Override
