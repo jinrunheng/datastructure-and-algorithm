@@ -73,7 +73,6 @@ public class LinkedList<E> {
     }
 
     /**
-     *
      * 在链表尾部添加新的元素 e
      *
      * @param e 添加的元素
@@ -82,5 +81,74 @@ public class LinkedList<E> {
         add(e, size);
     }
 
+    /**
+     * @param index 获取元素的索引
+     * @return 获取 index 位置的节点值
+     */
+    public E get(int index) {
+        if (index < 0 || index >= size) {
+            throw new IllegalArgumentException("Get failed.Index is illegal.");
+        }
+        Node pre = dummyHead;
+        for (int i = 0; i < index; i++) {
+            pre = pre.next;
+        }
+        return pre.next.e;
+    }
 
+    /**
+     * @return 获取链表的第一个元素
+     */
+    public E getFirst() {
+        return get(0);
+    }
+
+    /**
+     * @return 获取链表的最后一个元素
+     */
+    public E getLast() {
+        return get(size - 1);
+    }
+
+    /**
+     * @param e     更新的元素
+     * @param index 更新 index 位置的元素
+     */
+    public void set(E e, int index) {
+        if (index < 0 || index >= size) {
+            throw new IllegalArgumentException("Set failed.Index is illegal.");
+        }
+        Node pre = dummyHead;
+        for (int i = 0; i < index; i++) {
+            pre = pre.next;
+        }
+        pre.next.e = e;
+    }
+
+    /**
+     * @param e 查找的元素
+     * @return 返回链表中是否有有元素 e
+     */
+    public boolean contains(E e) {
+        Node cur = dummyHead.next;
+        while (cur != null) {
+            if (cur.e.equals(e)) {
+                return true;
+            }
+            cur = cur.next;
+        }
+        return false;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        Node cur = dummyHead.next;
+        while (cur != null) {
+            sb.append(cur.e + "->");
+            cur = cur.next;
+        }
+        sb.append("NULL");
+        return sb.toString();
+    }
 }
