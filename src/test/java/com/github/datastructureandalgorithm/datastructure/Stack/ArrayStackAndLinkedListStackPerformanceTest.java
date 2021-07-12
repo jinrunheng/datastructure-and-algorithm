@@ -22,7 +22,7 @@ public class ArrayStackAndLinkedListStackPerformanceTest {
 
     @Test
     void test() {
-        int opCount = 100000;
+        int opCount = 1000000;
         ArrayStack<Integer> arrayStack = new ArrayStack<>();
         double time1 = testStack(arrayStack, opCount);
         System.out.println("ArrayStack,time: " + time1 + " s");
