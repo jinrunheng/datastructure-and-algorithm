@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Random;
 
-public class ArrayQueueAndLoopQueuePerformanceTest {
+public class QueuePerformanceTest {
 
     /**
      * @param queue   测试的队列
@@ -29,11 +29,15 @@ public class ArrayQueueAndLoopQueuePerformanceTest {
         int opCount = 100000;
         ArrayQueue<Integer> arrayQueue = new ArrayQueue<>();
         LoopQueue<Integer> loopQueue = new LoopQueue<>();
+        LinkedListQueue<Integer> linkedListQueue = new LinkedListQueue<>();
+
         double time1 = testQueue(arrayQueue, opCount);
         System.out.println("ArrayQueue time : " + time1 + " s");
 
         double time2 = testQueue(loopQueue, opCount);
         System.out.println("LoopQueue time : " + time2 + " s");
-    }
 
+        double time3 = testQueue(linkedListQueue, opCount);
+        System.out.println("LinkedListQueue time : " + time3 + " s");
+    }
 }

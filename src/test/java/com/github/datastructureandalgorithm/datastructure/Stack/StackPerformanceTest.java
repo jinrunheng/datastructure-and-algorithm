@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Random;
 
-public class ArrayStackAndLinkedListStackPerformanceTest {
+public class StackPerformanceTest {
 
     private static double testStack(Stack<Integer> stack, int opCount) {
         long startTime = System.nanoTime();
