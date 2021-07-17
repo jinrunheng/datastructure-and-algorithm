@@ -215,7 +215,7 @@ public class BST<E extends Comparable<E>> {
      * @param node 删除掉以 node 为根的二分搜索树中的最大节点
      * @return 返回删除节点后新的二分搜索树的根
      */
-    private Node removeMax(Node node){
+    private Node removeMax(Node node) {
         if (node.right == null) {
             Node leftNode = node.left;
             node.left = null;
@@ -224,5 +224,45 @@ public class BST<E extends Comparable<E>> {
         }
         node.right = removeMax(node.right);
         return node;
+    }
+
+    public void remove(E e) {
+        root = remove(e, root);
+    }
+
+    private Node remove(E e, Node node) {
+        if (node == null) {
+            return null;
+        }
+        if (e.compareTo((E) node.e) < 0) {
+            node.left = remove(e, node.left);
+            return node;
+        } else if (e.compareTo((E) node.e) > 0) {
+            node.right = remove(e, node.right);
+            return node;
+        } else {
+            if (node.left == null) {
+                Node rightNode = node.right;
+                node.right = null;
+                size--;
+                return rightNode;
+            }
+            if (node.right == null) {
+                Node leftNode = node.left;
+                node.left = null;
+                size--;
+                return leftNode;
+            }
+
+            // Hibbard Deletion
+            Node successor = minimum(node.right);
+            Node right = removeMin(node.right);
+            Node left = node.left;
+            successor.left = left;
+            successor.right = right;
+            node.left = null;
+            node.right = null;
+            return successor;
+        }
     }
 }
