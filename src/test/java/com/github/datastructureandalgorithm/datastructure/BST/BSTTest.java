@@ -78,4 +78,31 @@ class BSTTest {
         System.out.println();
         TreeUtils.preOrder(bst.getRoot());
     }
+
+    @Test
+    void remove(){
+        //    11
+        //   /  \
+        //  7    14
+        // / \   / \
+        //5  9  12  16
+        BST<Integer> bst = new BST<>();
+        bst.add(11);
+        bst.add(7);
+        bst.add(14);
+        bst.add(5);
+        bst.add(9);
+        bst.add(12);
+        bst.add(16);
+
+        bst.remove(14);
+        //    11
+        //   /  \
+        //  7    16
+        // / \   / \
+        //5  9  12
+        Assertions.assertFalse(bst.contains(14));
+        Assertions.assertEquals(bst.size(),6);
+        TreeUtils.printTree(bst.getRoot());
+    }
 }
