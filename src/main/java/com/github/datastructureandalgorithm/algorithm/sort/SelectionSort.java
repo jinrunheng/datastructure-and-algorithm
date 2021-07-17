@@ -1,6 +1,6 @@
 package com.github.datastructureandalgorithm.algorithm.sort;
 
-import com.github.datastructureandalgorithm.algorithm.util.MyUtils;
+import com.github.datastructureandalgorithm.algorithm.util.SwapUtils;
 
 public class SelectionSort {
     public static void sort(int[] arr) {
@@ -13,7 +13,7 @@ public class SelectionSort {
             for (int j = i + 1; j < arr.length; j++) {
                 minIndex = arr[minIndex] > arr[j] ? j : minIndex;
             }
-            MyUtils.swap(arr, minIndex, i);
+            SwapUtils.swap(arr, minIndex, i);
         }
     }
 }

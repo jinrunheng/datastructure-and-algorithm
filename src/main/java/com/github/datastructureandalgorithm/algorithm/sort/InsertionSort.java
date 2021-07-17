@@ -1,6 +1,6 @@
 package com.github.datastructureandalgorithm.algorithm.sort;
 
-import com.github.datastructureandalgorithm.algorithm.util.MyUtils;
+import com.github.datastructureandalgorithm.algorithm.util.SwapUtils;
 
 public class InsertionSort {
 
@@ -10,7 +10,7 @@ public class InsertionSort {
         }
         for (int i = 1; i < arr.length; i++) {
             for (int j = i; j > 0 && arr[j] < arr[j - 1]; j--) {
-                MyUtils.swap(arr, j, j - 1);
+                SwapUtils.swap(arr, j, j - 1);
             }
         }
     }

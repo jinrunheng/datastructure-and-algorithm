@@ -1,6 +1,6 @@
 package com.github.datastructureandalgorithm.algorithm.util;
 
-public class MyUtils {
+public class SwapUtils {
     public static void swap(int[] arr, int i, int j) {
         if (i < 0 || i >= arr.length || j < 0 || j >= arr.length) {
             throw new IllegalArgumentException("Index is illegal");
