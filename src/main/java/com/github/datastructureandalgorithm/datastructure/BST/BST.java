@@ -106,7 +106,6 @@ public class BST<E extends Comparable<E>> {
     }
 
     /**
-     *
      * @param node 中序遍历以 node 为 根的二分搜索树
      */
     private void inOrder(Node node) {
@@ -116,6 +115,26 @@ public class BST<E extends Comparable<E>> {
         inOrder(node.left);
         System.out.println(node.e + " ");
         inOrder(node.right);
+    }
+
+    /**
+     * 二分搜索树的后序遍历
+     */
+    public void postOrder() {
+        postOrder(root);
+    }
+
+    /**
+     *
+     * @param node 后序遍历以 node 为 根的二分搜索树
+     */
+    private void postOrder(Node node) {
+        if (node == null) {
+            return;
+        }
+        postOrder(node.left);
+        postOrder(node.right);
+        System.out.println(node.e + " ");
     }
 
 }
