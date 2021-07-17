@@ -13,5 +13,6 @@ This is a Data Structure and Algorithm learning repo implements by Java
 |Queue|[LoopQueue.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/datastructure/Queue/LoopQueue.java)|[3.队列](https://www.yuque.com/dobbykim/azx4gy/gfxpkg)|
 |Queue|[LinkedListQueue.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/datastructure/Queue/LinkedListQueue.java)|[4.链表](https://www.yuque.com/dobbykim/azx4gy/vsp93n)|
 |LinkedList|[LinkedList.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/datastructure/LinkedList/LinkedList.java)|[4.链表](https://www.yuque.com/dobbykim/azx4gy/vsp93n)|
-
+|BST|[BST.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/datastructure/BST/BST.java)|[5.二分搜索树](https://www.yuque.com/dobbykim/azx4gy/dn75fh)|
 ## Algorithm
+
