@@ -98,4 +98,24 @@ public class BST<E extends Comparable<E>> {
         preOrder(node.right);
     }
 
+    /**
+     * 二分搜索树的中序遍历
+     */
+    public void inOrder() {
+        inOrder(root);
+    }
+
+    /**
+     *
+     * @param node 中序遍历以 node 为 根的二分搜索树
+     */
+    private void inOrder(Node node) {
+        if (node == null) {
+            return;
+        }
+        inOrder(node.left);
+        System.out.println(node.e + " ");
+        inOrder(node.right);
+    }
+
 }
