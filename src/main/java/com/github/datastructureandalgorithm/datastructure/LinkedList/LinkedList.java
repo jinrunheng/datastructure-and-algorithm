@@ -1,5 +1,7 @@
 package com.github.datastructureandalgorithm.datastructure.LinkedList;
 
+import java.util.List;
+
 public class LinkedList<E> {
 
     private class Node {
@@ -138,6 +140,27 @@ public class LinkedList<E> {
             cur = cur.next;
         }
         return false;
+    }
+
+    /**
+     * @param e 删除链表中的元素 e
+     *          此方法只能删除链表中的第一个元素 e
+     *          例如：链表为 3->4->5->5->4->NULL
+     *          remove(4)
+     *          结果为：3->5->5->4->NULL
+     */
+    public void removeElement(E e) {
+        Node pre = dummyHead;
+        while (pre.next != null) {
+            if (pre.next.e.equals(e)) {
+                Node delNode = pre.next;
+                pre.next = delNode.next;
+                delNode.next = null;
+                size--;
+                return;
+            }
+            pre = pre.next;
+        }
     }
 
     /**

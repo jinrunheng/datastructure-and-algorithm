@@ -82,6 +82,26 @@ class LinkedListTest {
     }
 
     @Test
+    void removeElement() {
+        LinkedList<Integer> linkedList = new LinkedList<>();
+
+        linkedList.addLast(3);
+        linkedList.addLast(4);
+        linkedList.addLast(5);
+        linkedList.addLast(5);
+        linkedList.addLast(4);
+        // 3->4->5->5->4->NULL
+
+        linkedList.removeElement(4);
+        // 3->5->5->4->NULL
+        Assertions.assertEquals(linkedList.getSize(),4);
+        Assertions.assertEquals(linkedList.get(0),3);
+        Assertions.assertEquals(linkedList.get(1),5);
+        Assertions.assertEquals(linkedList.get(2),5);
+        Assertions.assertEquals(linkedList.get(3),4);
+    }
+
+    @Test
     void testToString() {
         LinkedList<Integer> linkedList = new LinkedList<>();
         for (int i = 0; i < 10; i++) {
