@@ -1,6 +1,5 @@
 package com.github.datastructureandalgorithm.datastructure.Heap;
 
-import com.github.datastructureandalgorithm.algorithm.util.SwapUtils;
 import com.github.datastructureandalgorithm.datastructure.dynamic_array.Array;
 
 public class MaxHeap<E extends Comparable<E>> {
@@ -69,6 +68,40 @@ public class MaxHeap<E extends Comparable<E>> {
         while (i > 0 && data.get(parent(i)).compareTo(data.get(i)) < 0) {
             data.swap(i, parent(i));
             i = parent(i);
+        }
+    }
+
+    /**
+     * @return 删除堆顶元素并返回
+     */
+    public E extractMax() {
+        E ret = findMax();
+        data.swap(0, data.getSize() - 1);
+        data.removeLast();
+        siftDown(0);
+        return ret;
+    }
+
+    /**
+     * @return 返回堆中最大的元素
+     */
+    public E findMax() {
+        if (data.isEmpty()) {
+            throw new RuntimeException("MaxHeap is Empty.");
+        }
+        return data.get(0);
+    }
+
+    private void siftDown(int i) {
+        while (leftChild(i) < size()) {
+            int maxIndex = rightChild(i) < size() ?
+                    data.get(rightChild(i)).compareTo(data.get(leftChild(i))) > 0 ? rightChild(i) : leftChild(i) : leftChild(i);
+            if (data.get(i).compareTo(data.get(maxIndex)) < 0) {
+                data.swap(i, maxIndex);
+                i = maxIndex;
+            } else {
+                break;
+            }
         }
     }
 }
