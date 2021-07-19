@@ -18,6 +18,7 @@ This is a Data Structure and Algorithm learning repo implements by Java
 |Set|[BSTSet.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/datastructure/Set/BSTSet.java)|[6.集合与映射](https://www.yuque.com/dobbykim/azx4gy/xm18du)|
 |Map|[LinkedListMap.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/datastructure/Map/LinkedListMap.java)|[6.集合与映射](https://www.yuque.com/dobbykim/azx4gy/xm18du)|
 |Map|[BSTMap.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/datastructure/Map/BSTMap.java)|[6.集合与映射](https://www.yuque.com/dobbykim/azx4gy/xm18du)|
-
+|Heap|[MaxHeap.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/datastructure/Heap/MaxHeap.java)|[7.优先队列与堆](https://www.yuque.com/dobbykim/azx4gy/vh3gqw)|
+|PriorityQueue|[PriorityQueue.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/datastructure/Heap/PriorityQueue.java)|[7.优先队列与堆](https://www.yuque.com/dobbykim/azx4gy/vh3gqw)|
 ## Algorithm
 
