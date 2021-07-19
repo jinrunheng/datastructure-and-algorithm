@@ -301,4 +301,19 @@ public class Array<E> {
         }
         data = newData;
     }
+
+    /**
+     * 交换数组索引为 i 和 j 位置的元素
+     *
+     * @param i
+     * @param j
+     */
+    public void swap(int i, int j) {
+        if (i < 0 || i >= size || j < 0 || j >= size) {
+            throw new IllegalArgumentException("Index is illegal");
+        }
+        E t = data[i];
+        data[i] = data[j];
+        data[j] = t;
+    }
 }

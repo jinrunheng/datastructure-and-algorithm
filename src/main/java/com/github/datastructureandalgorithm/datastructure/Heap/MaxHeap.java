@@ -1,5 +1,6 @@
 package com.github.datastructureandalgorithm.datastructure.Heap;
 
+import com.github.datastructureandalgorithm.algorithm.util.SwapUtils;
 import com.github.datastructureandalgorithm.datastructure.dynamic_array.Array;
 
 public class MaxHeap<E extends Comparable<E>> {
@@ -54,4 +55,19 @@ public class MaxHeap<E extends Comparable<E>> {
         return index * 2 + 2;
     }
 
+    /**
+     * 向堆中添加元素 e
+     *
+     * @param e
+     */
+    public void add(E e) {
+        data.addLast(e);
+        siftUp(data.getSize() - 1);
+    }
+
+    private void siftUp(int i) {
+        while (i > 0 && data.get(parent(i)).compareTo(data.get(i)) < 0) {
+            SwapUtils.swap(data,i,parent(i));
+        }
+    }
 }
