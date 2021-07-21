@@ -40,12 +40,12 @@ public class SkipList<E extends Comparable<E>> {
      * @return 跳表中是否包含值为 val 的节点
      */
     public boolean contains(E e) {
-        Node node = dummyHead;
+        Node cur = dummyHead;
         for (int i = maxLevel - 1; i >= 0; i--) {
-            while (node.next != null && node.next[i].e.compareTo(e) < 0) {
-                node = node.next[i];
+            while (cur.next != null && cur.next[i].e.compareTo(e) < 0) {
+                cur = cur.next[i];
             }
-            if (node.next[i].e.equals(e)) {
+            if (cur.next[i].e.equals(e)) {
                 return true;
             }
         }
@@ -54,7 +54,29 @@ public class SkipList<E extends Comparable<E>> {
 
     public void add(E e) {
         // 如果当前跳表没有任何元素
-        dummyHead.next == null ?
+        int level = dummyHead.next == null ? 1 : generateRandomLevel();
+        if (level > maxLevel) {
+            maxLevel = level;
+        }
+        Node<E> newNode = new Node<>(level);
+        newNode.e = e;
+
+
+        Node cur = dummyHead;
+        for (int i = maxLevel - 1; i >= 0; i--) {
+            while (cur.next != null && cur.next[i].e.compareTo(e) < 0) {
+                cur = cur.next[i];
+            }
+            if (level > i) {
+                if (cur.next[i] == null) {
+                    cur.next[i] = newNode;
+                } else {
+                    Node next = cur.next[i];
+                    cur.next[i] = newNode;
+                    newNode.next[i] = next;
+                }
+            }
+        }
     }
 
     /**
