@@ -59,8 +59,8 @@ public class SkipList<E extends Comparable<E>> {
         if (contains(e)) {
             throw new IllegalArgumentException("Add Failed! This element already exists");
         }
-        // 如果当前跳表没有任何元素
-        int level = dummyHead.next == null ? 1 : generateRandomLevel();
+
+        int level = generateRandomLevel();
         if (level > maxLevel) {
             maxLevel = level;
         }
@@ -87,6 +87,9 @@ public class SkipList<E extends Comparable<E>> {
         size++;
     }
 
+    /**
+     * @param e 从跳表中删除元素 e
+     */
     public void remove(E e) {
         if (!contains(e)) {
             throw new IllegalArgumentException("Remove Failed! There is no such element: " + e + " in SkipList.");
@@ -147,7 +150,7 @@ public class SkipList<E extends Comparable<E>> {
     public void printAllElement() {
         Node cur = dummyHead;
         while (cur.next[0] != null) {
-            System.out.println(cur.next[0] + " ");
+            System.out.print(cur.next[0] + " ");
             cur = cur.next[0];
         }
         System.out.println();
