@@ -4,8 +4,6 @@ import com.github.datastructureandalgorithm.algorithm.util.TreeUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class BSTTest {
 
     @Test
@@ -80,7 +78,7 @@ class BSTTest {
     }
 
     @Test
-    void remove(){
+    void remove() {
         //    11
         //   /  \
         //  7    14
@@ -102,7 +100,16 @@ class BSTTest {
         // / \   / \
         //5  9  12
         Assertions.assertFalse(bst.contains(14));
-        Assertions.assertEquals(bst.size(),6);
+        Assertions.assertEquals(bst.size(), 6);
         TreeUtils.printTree(bst.getRoot());
+    }
+
+    @Test
+    void add() {
+        BST<Integer> bst = new BST<>();
+        for (int i = 0; i < 10000; i++) {
+            bst.add(i);
+        }
+        Assertions.assertEquals(bst.size(), 10000);
     }
 }
