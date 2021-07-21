@@ -52,7 +52,13 @@ public class SkipList<E extends Comparable<E>> {
         return false;
     }
 
+    /**
+     * @param e 向跳表中添加一个元素 e
+     */
     public void add(E e) {
+        if (contains(e)) {
+            throw new IllegalArgumentException("Add Failed! This element already exists");
+        }
         // 如果当前跳表没有任何元素
         int level = dummyHead.next == null ? 1 : generateRandomLevel();
         if (level > maxLevel) {
@@ -77,6 +83,29 @@ public class SkipList<E extends Comparable<E>> {
                 }
             }
         }
+        size++;
+    }
+
+    public void remove(E e) {
+        if (!contains(e)) {
+            throw new IllegalArgumentException("Remove Failed! There is no such element: " + e + " in SkipList.");
+        }
+        Node<E>[] update = new Node[maxLevel];
+        Node cur = dummyHead;
+        for (int i = maxLevel - 1; i >= 0; i--) {
+            while (cur.next != null && cur.next[i].e.compareTo(e) < 0) {
+                cur = cur.next[i];
+            }
+            update[i] = cur;
+        }
+        if (cur.next[0] != null && cur.next[0].e.equals(e)) {
+            for (int i = maxLevel - 1; i >= 0; i--) {
+                if (update[i].next[i] != null && update[i].next[i].e.equals(e)) {
+                    update[i].next[i] = update[i].next[i].next[i];
+                }
+            }
+        }
+        size--;
     }
 
     /**
