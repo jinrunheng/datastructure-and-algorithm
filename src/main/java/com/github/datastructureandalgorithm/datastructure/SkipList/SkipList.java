@@ -42,10 +42,10 @@ public class SkipList<E extends Comparable<E>> {
     public boolean contains(E e) {
         Node cur = dummyHead;
         for (int i = maxLevel - 1; i >= 0; i--) {
-            while (cur.next != null && cur.next[i].e.compareTo(e) < 0) {
+            while (cur.next[i] != null && cur.next[i].e.compareTo(e) < 0) {
                 cur = cur.next[i];
             }
-            if (cur.next[i].e.equals(e)) {
+            if (cur.next[i] != null && cur.next[i].e.equals(e)) {
                 return true;
             }
         }
@@ -70,7 +70,7 @@ public class SkipList<E extends Comparable<E>> {
 
         Node cur = dummyHead;
         for (int i = maxLevel - 1; i >= 0; i--) {
-            while (cur.next != null && cur.next[i].e.compareTo(e) < 0) {
+            while (cur.next[i] != null && cur.next[i].e.compareTo(e) < 0) {
                 cur = cur.next[i];
             }
             if (level > i) {
@@ -83,6 +83,7 @@ public class SkipList<E extends Comparable<E>> {
                 }
             }
         }
+
         size++;
     }
 
@@ -93,7 +94,7 @@ public class SkipList<E extends Comparable<E>> {
         Node<E>[] update = new Node[maxLevel];
         Node cur = dummyHead;
         for (int i = maxLevel - 1; i >= 0; i--) {
-            while (cur.next != null && cur.next[i].e.compareTo(e) < 0) {
+            while (cur.next[i] != null && cur.next[i].e.compareTo(e) < 0) {
                 cur = cur.next[i];
             }
             update[i] = cur;
@@ -103,6 +104,10 @@ public class SkipList<E extends Comparable<E>> {
                 if (update[i].next[i] != null && update[i].next[i].e.equals(e)) {
                     update[i].next[i] = update[i].next[i].next[i];
                 }
+            }
+
+            while (maxLevel > 1 && dummyHead.next[maxLevel] == null) {
+                maxLevel--;
             }
         }
         size--;
@@ -134,5 +139,17 @@ public class SkipList<E extends Comparable<E>> {
      */
     public int getSize() {
         return size;
+    }
+
+    /**
+     * 打印输出跳表中的所有元素
+     */
+    public void printAllElement() {
+        Node cur = dummyHead;
+        while (cur.next[0] != null) {
+            System.out.println(cur.next[0] + " ");
+            cur = cur.next[0];
+        }
+        System.out.println();
     }
 }
