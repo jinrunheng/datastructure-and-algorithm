@@ -2,6 +2,7 @@ package com.github.datastructureandalgorithm.datastructure.SkipList;
 
 import com.github.datastructureandalgorithm.datastructure.BST.BST;
 import com.github.datastructureandalgorithm.datastructure.LinkedList.LinkedList;
+import com.github.datastructureandalgorithm.datastructure.dynamic_array.Array;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -52,47 +53,56 @@ class SkipListTest {
         skipList.printAllElement();
     }
 
+
     @Test
     void SkipListPerformanceTest() {
         SkipList<Integer> skipList = new SkipList<>();
         LinkedList<Integer> linkedList = new LinkedList<>();
         BST<Integer> bst = new BST<>();
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < 100000; i++) {
             skipList.add(i);
             linkedList.addLast(i);
-            bst.add(i);
         }
-        double time1 = testSkipList(skipList);
-        double time2 = testBST(bst);
+        Array<Integer> array = generateRandomArray();
+        double time1 = testSkipList(skipList,array);
         System.out.println("SkipList contains : " + time1 + " s");
-        System.out.println("BST contains : " + time2 + " s");
+        // double time2 = testBST(bst,array);
+        double time3 = testLinkedList(linkedList,array);
+        System.out.println("LinkedList contains : " + time3 + " s");
+        // System.out.println("BST contains : " + time2 + " s");
     }
 
-    private static double testSkipList(SkipList<Integer> skipList) {
-        Random random = new Random(10000);
+    private static Array<Integer> generateRandomArray() {
+        Array<Integer> array = new Array<>();
+        Random random = new Random();
+        for (int i = 0; i < 100000; i++) {
+            array.addLast(random.nextInt(100000));
+        }
+        return array;
+    }
+
+    private static double testSkipList(SkipList<Integer> skipList, Array<Integer> array) {
         long startTime = System.nanoTime();
-        for (int i = 0; i < 10000; i++) {
-            skipList.contains(random.nextInt());
+        for (int i = 0; i < 100000; i++) {
+            skipList.contains(array.get(i));
         }
         long endTime = System.nanoTime();
         return (endTime - startTime) / 1000000000.0;
     }
 
-    private static double testLinkedList(LinkedList<Integer> linkedList) {
-        Random random = new Random(10000);
+    private static double testLinkedList(LinkedList<Integer> linkedList, Array<Integer> array) {
         long startTime = System.nanoTime();
-        for (int i = 0; i < 10000; i++) {
-            linkedList.contains(random.nextInt());
+        for (int i = 0; i < 100000; i++) {
+            linkedList.contains(array.get(i));
         }
         long endTime = System.nanoTime();
         return (endTime - startTime) / 1000000000.0;
     }
 
-    private static double testBST(BST<Integer> bst) {
-        Random random = new Random(10000);
+    private static double testBST(BST<Integer> bst, Array<Integer> array) {
         long startTime = System.nanoTime();
         for (int i = 0; i < 10000; i++) {
-            bst.contains(random.nextInt());
+            bst.contains(array.get(i));
         }
         long endTime = System.nanoTime();
         return (endTime - startTime) / 1000000000.0;
