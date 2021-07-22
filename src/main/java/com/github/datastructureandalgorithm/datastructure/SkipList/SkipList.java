@@ -11,7 +11,7 @@ public class SkipList<E extends Comparable<E>> {
 
     class Node<E extends Comparable<E>> {
         public E e;
-        public Node<E> next[];
+        public Node<E>[] next;
 
         public Node(int level) {
             next = new Node[level];
@@ -20,19 +20,19 @@ public class SkipList<E extends Comparable<E>> {
         @Override
         public String toString() {
             StringBuilder sb = new StringBuilder();
-            sb.append("{ e : " + e + " , levels : " + next.length + " }");
+            sb.append("{ e : " + e + " , level : " + next.length + " }");
             return sb.toString();
         }
     }
 
-    // 跳表层数为 32 层
-    private final int MAX_LEVEL = 32;
-    // 当前跳表出现过的最大的层数
+    // 跳表的最大层数为 16 层
+    private final int MAX_LEVEL = 16;
+    // 当前跳表出现过的最大的“索引高度”
     private int maxLevel = 1;
     // 跳表元素的个数
     private int size = 0;
 
-    private Node<E> dummyHead = new Node<>(MAX_LEVEL);
+    private Node<E> head = new Node<>(MAX_LEVEL);
     private Random random = new Random();
 
     /**
@@ -40,7 +40,7 @@ public class SkipList<E extends Comparable<E>> {
      * @return 跳表中是否包含值为 val 的节点
      */
     public boolean contains(E e) {
-        Node cur = dummyHead;
+        Node cur = head;
         for (int i = maxLevel - 1; i >= 0; i--) {
             while (cur.next[i] != null && cur.next[i].e.compareTo(e) < 0) {
                 cur = cur.next[i];
@@ -61,6 +61,7 @@ public class SkipList<E extends Comparable<E>> {
         }
 
         int level = generateRandomLevel();
+        // 更新当前跳表的 maxLevel
         if (level > maxLevel) {
             maxLevel = level;
         }
@@ -68,7 +69,7 @@ public class SkipList<E extends Comparable<E>> {
         newNode.e = e;
 
 
-        Node cur = dummyHead;
+        Node cur = head;
         for (int i = maxLevel - 1; i >= 0; i--) {
             while (cur.next[i] != null && cur.next[i].e.compareTo(e) < 0) {
                 cur = cur.next[i];
@@ -95,7 +96,7 @@ public class SkipList<E extends Comparable<E>> {
             throw new IllegalArgumentException("Remove Failed! There is no such element: " + e + " in SkipList.");
         }
         Node<E>[] update = new Node[maxLevel];
-        Node cur = dummyHead;
+        Node cur = head;
         for (int i = maxLevel - 1; i >= 0; i--) {
             while (cur.next[i] != null && cur.next[i].e.compareTo(e) < 0) {
                 cur = cur.next[i];
@@ -108,8 +109,8 @@ public class SkipList<E extends Comparable<E>> {
                     update[i].next[i] = update[i].next[i].next[i];
                 }
             }
-
-            while (maxLevel > 1 && dummyHead.next[maxLevel] == null) {
+            // 更新当前跳表的 maxLevel
+            while (maxLevel > 1 && head.next[maxLevel] == null) {
                 maxLevel--;
             }
         }
@@ -118,7 +119,6 @@ public class SkipList<E extends Comparable<E>> {
 
     /**
      * @return 返回一个 1 ~ MAX_LEVEL 之间的随机数字；
-     * 随机 MAX_LEVEL - 1 次，如果 random.nextInt() 为奇数，则返回值加一
      */
     private int generateRandomLevel() {
         int level = 1;
@@ -148,7 +148,7 @@ public class SkipList<E extends Comparable<E>> {
      * 打印输出跳表中的所有元素
      */
     public void printAllElement() {
-        Node cur = dummyHead;
+        Node cur = head;
         while (cur.next[0] != null) {
             System.out.print(cur.next[0] + " ");
             cur = cur.next[0];
