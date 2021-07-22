@@ -20,5 +20,6 @@ This is a Data Structure and Algorithm learning repo implements by Java
 |Map|[BSTMap.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/datastructure/Map/BSTMap.java)|[6.集合与映射](https://www.yuque.com/dobbykim/azx4gy/xm18du)|
 |Heap|[MaxHeap.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/datastructure/Heap/MaxHeap.java)|[7.优先队列与堆](https://www.yuque.com/dobbykim/azx4gy/vh3gqw)|
 |PriorityQueue|[PriorityQueue.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/datastructure/Heap/PriorityQueue.java)|[7.优先队列与堆](https://www.yuque.com/dobbykim/azx4gy/vh3gqw)|
+|SkipList|[SkipList.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/datastructure/SkipList/SkipList.java)|[8.跳表](https://www.yuque.com/dobbykim/azx4gy/uprqwn)|
 ## Algorithm
 
