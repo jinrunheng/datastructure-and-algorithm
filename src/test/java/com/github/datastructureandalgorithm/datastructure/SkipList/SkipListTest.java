@@ -50,6 +50,7 @@ class SkipListTest {
         for (int i = 0; i < 10; i++) {
             skipList.add(i);
         }
+        skipList.remove(1);
         skipList.printAllElement();
     }
 
