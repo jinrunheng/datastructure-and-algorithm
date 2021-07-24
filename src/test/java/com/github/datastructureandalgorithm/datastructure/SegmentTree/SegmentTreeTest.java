@@ -17,6 +17,11 @@ class SegmentTreeTest {
 
     @Test
     void testToString() {
+        Integer[] nums = {0,-3,-3,1,1,2};
+        SegmentTree<Integer> segmentTree = new SegmentTree<>(nums, Integer::sum);
+        Integer query = segmentTree.query(4,5);
+        System.out.println(query);
+        System.out.println(segmentTree.toString());
     }
 
     @Test
@@ -33,4 +38,5 @@ class SegmentTreeTest {
         Integer result = segmentTree.query(2, 5);
         Assertions.assertEquals(result,-1);
     }
+
 }
