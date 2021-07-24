@@ -115,9 +115,9 @@ public class SegmentTree<E> {
         int rightTreeIndex = getRightChildIndex(treeIndex);
 
 
-        if (queryL > mid) {
+        if (queryL > mid) {// 如果查找的区间范围只在右子树中
             return query(rightTreeIndex, mid + 1, r, queryL, queryR);
-        } else if (queryR < mid + 1) {
+        } else if (queryR < mid + 1) {// 如果查找的区间范围只在左子树中
             return query(leftTreeIndex, l, mid, queryL, queryR);
         }
 
