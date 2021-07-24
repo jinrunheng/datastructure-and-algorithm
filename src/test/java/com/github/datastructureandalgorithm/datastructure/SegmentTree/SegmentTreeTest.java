@@ -39,4 +39,15 @@ class SegmentTreeTest {
         Assertions.assertEquals(result,-1);
     }
 
+    @Test
+    void update(){
+        Integer[] nums = {-2, 0, 3, -5, 2, -1};
+        SegmentTree<Integer> segmentTree = new SegmentTree<>(nums, Integer::sum);
+        Integer result = segmentTree.query(2, 5);
+        Assertions.assertEquals(result,-1);
+        segmentTree.update(2,5);
+        result = segmentTree.query(2, 5);
+        Assertions.assertEquals(result,1);
+    }
+
 }
