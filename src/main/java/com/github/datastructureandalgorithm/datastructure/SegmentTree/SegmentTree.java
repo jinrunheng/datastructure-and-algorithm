@@ -126,6 +126,43 @@ public class SegmentTree<E> {
         return merger.merge(leftResult, rightResult);
     }
 
+    public void update(int index, E e) {
+        if (index < 0 || index >= data.length)
+            throw new IllegalArgumentException("Index is illegal");
+
+        data[index] = e;
+        update(0, 0, data.length - 1, index, e);
+    }
+
+    /**
+     * 在以 treeIndex 为根节点的线段树中，更新 index 的值为 e
+     *
+     * @param treeIndex
+     * @param l
+     * @param r
+     * @param index
+     * @param e
+     */
+    private void update(int treeIndex, int l, int r, int index, E e) {
+        if (l == r) {
+            // 当 l == r 说明，找到了线段树的叶子节点，该节点的值就是 data[index]，更新这个节点
+            tree[treeIndex] = e;
+            return;
+        }
+
+        int leftTreeIndex = getLeftChildIndex(treeIndex);
+        int rightTreeIndex = getRightChildIndex(treeIndex);
+
+        int mid = l + ((r - l) >> 1);
+
+        if (index <= mid)
+            update(leftTreeIndex, l, mid, index, e);
+        else
+            update(rightTreeIndex, mid + 1, r, index, e);
+
+        tree[treeIndex] = merger.merge(tree[leftTreeIndex], tree[rightTreeIndex]);
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
