@@ -26,11 +26,17 @@ public class SegmentTree2<E> {
     }
 
 
+    /**
+     * 更改 data 数组 index 处的元素为 val
+     *
+     * @param index
+     * @param val
+     */
     public void update(int index, E val) {
         data[index] = val;
         index += data.length;
         tree[index] = val;
-        while (index > 0) {
+        while (index > 1) {
             int leftIndex = index;
             int rightIndex = index;
             if (index % 2 == 0) {
@@ -38,11 +44,19 @@ public class SegmentTree2<E> {
             } else {
                 leftIndex = index - 1;
             }
+
             tree[index / 2] = merger.merge(tree[leftIndex], tree[rightIndex]);
             index /= 2;
         }
     }
 
+    /**
+     * 查询区间 [l...r] 的信息
+     *
+     * @param l
+     * @param r
+     * @return
+     */
     public E query(int l, int r) {
         if (l < 0 || l >= data.length
                 || r < 0 || r >= data.length
@@ -74,5 +88,4 @@ public class SegmentTree2<E> {
         }
         return res;
     }
-
 }

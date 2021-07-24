@@ -11,7 +11,9 @@ class SegmentTree2Test {
     void update() {
         Integer[] arr = {2,3,5,-1,6,8,7,0,-2};
         SegmentTree2<Integer> segmentTree2 = new SegmentTree2<>(arr,Integer::sum);
-        Assertions.assertEquals(28,segmentTree2.query(0,8));
+        Assertions.assertEquals(15,segmentTree2.query(0,4));
+        segmentTree2.update(1,5);
+        Assertions.assertEquals(17,segmentTree2.query(0,4));
     }
 
     @Test
