@@ -5,48 +5,35 @@ import java.util.*;
 public class HuffmanTree {
     /**
      * @param list 传入所有节点的 list
-     * @return 返回生成的哈夫曼树的根
+     * @return 返回哈夫曼树的根节点
      */
     public static Node createHuffmanTree(List<Node> list) {
-        while (list.size() > 1) {
-            Collections.sort(list);
-            // 获取权值最小的两个节点
-            Node left = list.get(0);
-            Node right = list.get(1);
-            // 生成新节点，新节点的权值为两个子节点权值的和
-            Node parent = new Node(null, left.weight + right.weight, left, right);
-            // 删除权值最小的两个节点
-            list.remove(0);
-            list.remove(0);
-            // 将新的节点添加到 list 中
-            list.add(parent);
+        PriorityQueue<Node> queue = new PriorityQueue<>();
+        for (int i = 0; i < list.size(); i++) {
+            queue.offer(list.get(i));
         }
-        return list.get(list.size() - 1);
+        return createHuffmanTree(queue);
     }
 
     /**
-     * 哈夫曼树的广度优先遍历
-     *
-     * @param root
-     * @return
+     * @param queue 按照节点的权值(node.weight) 由小到大维护的优先队列
+     * @return 返回哈夫曼树的根节点
      */
-    public static List<Node> levelOrder(Node root) {
-        List<Node> ret = new ArrayList<>();
-        if (root != null) {
-            Queue<Node> queue = new LinkedList<>();
-            queue.offer(root);
-            while (!queue.isEmpty()) {
-                root = queue.poll();
-                ret.add(root);
-                if (root.left != null)
-                    queue.offer(root.left);
-                if (root.right != null)
-                    queue.offer(root.right);
-            }
+    public static Node createHuffmanTree(PriorityQueue<Node> queue) {
+        while (queue.size() > 1) {
+            Node left = queue.poll();
+            Node right = queue.poll();
+            Node parent = new Node(null, left.weight + right.weight, left, right);
+            queue.offer(parent);
         }
-        return ret;
+        return queue.poll();
     }
 
+    /**
+     *
+     * @param root 传入哈夫曼树的根节点
+     * @return 返回带权路径长度 (WPL)
+     */
     public static double getWPL(Node root) {
         double ret = 0.0;
         int level = 0;
@@ -69,5 +56,27 @@ public class HuffmanTree {
             }
         }
         return ret;
+    }
+
+    /**
+     * 将 Huffman 树所有节点对应的字符转化为 01 编码字符串
+     *
+     * @param root
+     * @return
+     */
+    public static Map<Character, String> huffmanTreeNodeDataToCode(Node root) {
+        Map<Character, String> map = new HashMap<>();
+        huffmanTreeNodeDataToCode(root, map, "");
+        return map;
+    }
+
+    private static void huffmanTreeNodeDataToCode(Node root, Map<Character, String> map, String code) {
+        if (root != null) {
+            huffmanTreeNodeDataToCode(root.left, map, code + "0");
+            if (root.left == null && root.right == null) {
+                map.put((Character) root.e, code);
+            }
+            huffmanTreeNodeDataToCode(root.right, map, code + "1");
+        }
     }
 }

@@ -6,22 +6,10 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class HuffmanTreeTest {
 
     @Test
     void createHuffmanTree() {
-        List<Node> nodes = new ArrayList<>();
-        nodes.add(new Node("e", 10));
-        nodes.add(new Node("d", 30));
-        nodes.add(new Node("a", 5));
-        nodes.add(new Node("b", 15));
-        nodes.add(new Node("c", 40));
-
-        Node root = HuffmanTree.createHuffmanTree(nodes);
-        System.out.println(HuffmanTree.levelOrder(root));
-
     }
 
     @Test
@@ -43,7 +31,16 @@ class HuffmanTreeTest {
         nodes.add(new Node("I", 8));
 
         Node root = HuffmanTree.createHuffmanTree(nodes);
-        // 103
-        System.out.println(HuffmanTree.getWPL(root));
+        // HuffmanTree
+        //        15(null)
+        //    /            \
+        //   6(null)        9(null)
+        //  / \            / \
+        // 3   3(null)    4   5
+        //    / \
+        //   1   2
+
+        // WPL = 5 * 2 + 4 * 2 + 3 * 2 + 2 * 3 + 1 * 3 = 33
+        Assertions.assertEquals(HuffmanTree.getWPL(root), 33);
     }
 }
