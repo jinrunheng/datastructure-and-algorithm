@@ -79,4 +79,35 @@ public class Trie {
         }
         return cur.isWord;
     }
+
+    /**
+     * 返回在 Trie 中有多少个以 prefix 为前缀的字符串
+     *
+     * @param prefix
+     * @return
+     */
+    public int prefix(String prefix) {
+        if (prefix == null) {
+            return 0;
+        }
+        TrieNode cur = root;
+        for (int i = 0; i < prefix.length(); i++) {
+            char c = prefix.charAt(i);
+            if (cur.next.get(c) == null) {
+                return 0;
+            }
+            cur = cur.next.get(c);
+        }
+        return cur.path;
+    }
+
+    /**
+     * 查询在 Trie 中是否有以 prefix 为前缀的单词
+     *
+     * @param prefix
+     * @return
+     */
+    public boolean isPrefix(String prefix) {
+        return prefix(prefix) > 0;
+    }
 }
