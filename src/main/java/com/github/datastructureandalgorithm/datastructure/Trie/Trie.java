@@ -97,10 +97,12 @@ public class Trie {
                 cur = cur.next.get(c);
                 if (--cur.path == 0) {
                     cur = null;
+                    size--;
                     return;
                 }
             }
             cur.end--;
+            size--;
         }
     }
 
