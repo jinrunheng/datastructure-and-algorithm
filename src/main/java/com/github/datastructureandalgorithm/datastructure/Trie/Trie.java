@@ -2,7 +2,6 @@ package com.github.datastructureandalgorithm.datastructure.Trie;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 /**
  * 实现的 Trie 默认不会添加重复的单词
@@ -11,11 +10,11 @@ public class Trie {
 
     private class TrieNode {
         public int path;
-        public boolean isWord;
+        public int end;
         public Map<Character, TrieNode> next;
 
         public TrieNode(boolean isWord) {
-            this.isWord = isWord;
+            this.end = 0;
             this.path = 0;
             next = new HashMap<>();
         }
@@ -48,6 +47,9 @@ public class Trie {
      * @param word
      */
     public void add(String word) {
+        if (word == null) {
+            return;
+        }
         TrieNode cur = root;
         for (int i = 0; i < word.length(); i++) {
             char c = word.charAt(i);
@@ -57,10 +59,8 @@ public class Trie {
             cur = cur.next.get(c);
             cur.path++;
         }
-        if (!cur.isWord) {
-            cur.isWord = true;
-            size++;
-        }
+        cur.end++;
+        size++;
     }
 
     /**
@@ -70,6 +70,9 @@ public class Trie {
      * @return
      */
     public boolean contains(String word) {
+        if (word == null) {
+            return false;
+        }
         TrieNode cur = root;
         for (int i = 0; i < word.length(); i++) {
             char c = word.charAt(i);
@@ -78,7 +81,27 @@ public class Trie {
             }
             cur = cur.next.get(c);
         }
-        return cur.isWord;
+        return cur.end > 0;
+    }
+
+    /**
+     * 从 Trie 中删除一个 word
+     *
+     * @param word
+     */
+    public void delete(String word) {
+        if (contains(word)) {
+            TrieNode cur = root;
+            for (int i = 0; i < word.length(); i++) {
+                char c = word.charAt(i);
+                cur = cur.next.get(c);
+                if (--cur.path == 0) {
+                    cur = null;
+                    return;
+                }
+            }
+            cur.end--;
+        }
     }
 
     /**
@@ -129,7 +152,7 @@ public class Trie {
 
     private boolean match(TrieNode node, String word, int index) {
         if (index == word.length()) {
-            return node.isWord;
+            return node.end > 0;
         }
         char c = word.charAt(index);
         if (c != '.') {
@@ -146,5 +169,4 @@ public class Trie {
             return false;
         }
     }
-
 }
