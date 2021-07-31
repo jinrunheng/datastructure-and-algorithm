@@ -78,7 +78,7 @@ public class Trie {
     }
 
     /**
-     * 从 Trie 中 word
+     * 从 Trie 中 删除 word
      *
      * @param word
      */

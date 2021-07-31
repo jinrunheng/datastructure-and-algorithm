@@ -25,5 +25,6 @@ This is a Data Structure and Algorithm learning repo implements by Java
 |跳表|[SkipList.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/datastructure/SkipList/SkipList.java)|[8.跳表](https://www.yuque.com/dobbykim/azx4gy/uprqwn)|
 |线段树|[SegmentTree.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/datastructure/SegmentTree/SegmentTree.java)|[9.线段树](https://www.yuque.com/dobbykim/azx4gy/mtsfhh)|
 |线段树|[SegmentTree2.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/datastructure/SegmentTree/SegmentTree2.java)|[9.线段树](https://www.yuque.com/dobbykim/azx4gy/mtsfhh)|
+|前缀树|[Trie.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/datastructure/Trie/Trie.java)|[11.前缀树](https://www.yuque.com/dobbykim/azx4gy/nhah3w)|
 ## Algorithm
 
