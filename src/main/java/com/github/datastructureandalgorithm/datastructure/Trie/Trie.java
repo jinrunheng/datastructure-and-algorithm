@@ -3,9 +3,6 @@ package com.github.datastructureandalgorithm.datastructure.Trie;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * 实现的 Trie 默认不会添加重复的单词
- */
 public class Trie {
 
     private class TrieNode {
@@ -76,7 +73,7 @@ public class Trie {
         TrieNode cur = root;
         for (int i = 0; i < word.length(); i++) {
             char c = word.charAt(i);
-            if (cur.next.get(c) == null) {
+            if (cur.next.get(c) == null || cur.next.get(c).path == 0) {
                 return false;
             }
             cur = cur.next.get(c);
@@ -85,21 +82,17 @@ public class Trie {
     }
 
     /**
-     * 从 Trie 中删除一个 word
+     * 从 Trie 中 word
      *
      * @param word
      */
-    public void delete(String word) {
+    public void remove(String word) {
         if (contains(word)) {
             TrieNode cur = root;
             for (int i = 0; i < word.length(); i++) {
                 char c = word.charAt(i);
                 cur = cur.next.get(c);
-                if (--cur.path == 0) {
-                    cur = null;
-                    size--;
-                    return;
-                }
+                cur.path--;
             }
             cur.end--;
             size--;
@@ -119,7 +112,7 @@ public class Trie {
         TrieNode cur = root;
         for (int i = 0; i < prefix.length(); i++) {
             char c = prefix.charAt(i);
-            if (cur.next.get(c) == null) {
+            if (cur.next.get(c) == null || cur.next.get(c).path == 0) {
                 return 0;
             }
             cur = cur.next.get(c);
@@ -158,7 +151,7 @@ public class Trie {
         }
         char c = word.charAt(index);
         if (c != '.') {
-            if (node.next.get(c) == null) {
+            if (node.next.get(c) == null || node.next.get(c).path == 0) {
                 return false;
             }
             return match(node.next.get(c), word, index + 1);
