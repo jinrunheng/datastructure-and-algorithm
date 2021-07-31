@@ -10,14 +10,10 @@ public class Trie {
         public int end;
         public Map<Character, TrieNode> next;
 
-        public TrieNode(boolean isWord) {
+        public TrieNode() {
             this.end = 0;
             this.path = 0;
             next = new HashMap<>();
-        }
-
-        public TrieNode() {
-            this(false);
         }
     }
 
