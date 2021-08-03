@@ -4,6 +4,9 @@ import com.github.datastructureandalgorithm.datastructure.BST.Node;
 
 import java.util.*;
 
+/**
+ * 仅仅针对 com.github.datastructureandalgorithm.datastructure.BST 包下的二分搜索树
+ */
 public class TreeUtils {
 
     /**
