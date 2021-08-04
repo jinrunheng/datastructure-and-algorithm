@@ -30,4 +30,5 @@ This is a Data Structure and Algorithm learning repo implements by Java
 ## LeetCode 类型题整理
 |Tag|Problem|Difficulty|Official Solution|My Solution|
 |---|---|---|---|---|
-|哈希表|[1. 两数之和](https://leetcode-cn.com/problems/two-sum/)|<font color=green>Easy</font>|[官方题解](https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-by-leetcode-solution/)|[我的题解](https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-by-dubykim-ztbu/)|
+|哈希表|[1. 两数之和](https://leetcode-cn.com/problems/two-sum/)|Easy|[官方题解](https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-by-leetcode-solution/)|[我的题解](https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-by-dubykim-ztbu/)|
+|回溯|[46. 全排列](https://leetcode-cn.com/problems/permutations/)|Medium|[官方题解](https://leetcode-cn.com/problems/permutations/solution/quan-pai-lie-by-leetcode-solution-2/)|[我的题解](https://leetcode-cn.com/problems/permutations/solution/quan-pai-lie-by-dubykim-cj3o/)|
