@@ -2,9 +2,9 @@
 
 This is a Data Structure and Algorithm learning repo implements by Java
 
-## Data Structure
+## 数据结构基础
 
-|Data Structure|Code|Note|
+|Data Structure|Code|Document|
 |---|---|---|
 |数组|[Array.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/datastructure/dynamic_array/Array.java)|[1.动态数组](https://www.yuque.com/dobbykim/azx4gy/eo19vs)|
 |栈|[ArrayStack.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/datastructure/Stack/ArrayStack.java)|[2.栈](https://www.yuque.com/dobbykim/azx4gy/qhni7w)|
@@ -26,5 +26,8 @@ This is a Data Structure and Algorithm learning repo implements by Java
 |线段树|[SegmentTree.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/datastructure/SegmentTree/SegmentTree.java)|[9.线段树](https://www.yuque.com/dobbykim/azx4gy/mtsfhh)|
 |线段树|[SegmentTree2.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/datastructure/SegmentTree/SegmentTree2.java)|[9.线段树](https://www.yuque.com/dobbykim/azx4gy/mtsfhh)|
 |前缀树|[Trie.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/datastructure/Trie/Trie.java)|[11.前缀树](https://www.yuque.com/dobbykim/azx4gy/nhah3w)|
-## Algorithm
-
+## 算法基础
+## LeetCode 类型题整理
+|Tag|Problem|Difficulty|Official Solution|My Solution|
+|---|---|---|---|---|
+|哈希表|[1. 两数之和](https://leetcode-cn.com/problems/two-sum/)|<font color=green>Easy</font>|[官方题解](https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-by-leetcode-solution/)|[我的题解](https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-by-dubykim-ztbu/)|
