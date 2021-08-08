@@ -71,7 +71,7 @@ public class AdjMatrix {
      * @param v
      * @return
      */
-    public List<Integer> adj(int v) {
+    public Iterable<Integer> adj(int v) {
         validateVertex(v);
         List<Integer> res = new ArrayList<>();
         for (int i = 0; i < V; i++) {

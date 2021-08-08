@@ -2,28 +2,28 @@ package com.github.datastructureandalgorithm.graph.chapter2;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.LinkedList;
 import java.util.Scanner;
+import java.util.TreeSet;
 
-public class AdjList {
+public class AdjSet {
 
     // 图有多少个顶点
     private int V;
     // 图有多少条边
     private int E;
 
-    private LinkedList<Integer>[] adj;
+    private TreeSet<Integer>[] adj;
 
-    public AdjList(String filename) {
+    public AdjSet(String filename) {
         File file = new File(filename);
 
         try (Scanner scanner = new Scanner(file)) {
             V = scanner.nextInt();
             if (V < 0) throw new IllegalArgumentException("V must be non-negative");
 
-            adj = new LinkedList[V];
+            adj = new TreeSet[V];
             for (int i = 0; i < V; i++)
-                adj[i] = new LinkedList<>();
+                adj[i] = new TreeSet<>();
 
 
             E = scanner.nextInt();
