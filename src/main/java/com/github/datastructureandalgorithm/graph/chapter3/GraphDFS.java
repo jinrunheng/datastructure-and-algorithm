@@ -5,7 +5,9 @@ import java.util.List;
 
 public class GraphDFS {
 
-    private List<Integer> order = new ArrayList<>();
+    private List<Integer> pre = new ArrayList<>();
+    private List<Integer> post = new ArrayList<>();
+
     private Graph G;
     private boolean[] visited;
 
@@ -24,19 +26,29 @@ public class GraphDFS {
      */
     private void dfs(int v) {
         visited[v] = true;
-        order.add(v);
+        pre.add(v);
         for (int w : G.adj(v)) {
             if (!visited[w])
                 dfs(w);
         }
+        post.add(v);
     }
 
     /**
-     * 返回图的深度优先遍历的结果集
+     * 返回图的深度优先遍历的前序遍历的结果集
      *
      * @return
      */
-    public Iterable<Integer> order() {
-        return order;
+    public Iterable<Integer> pre() {
+        return pre;
+    }
+
+    /**
+     * 返回图的深度优先遍历的后序遍历的结果集
+     *
+     * @return
+     */
+    public Iterable<Integer> post() {
+        return post;
     }
 }
