@@ -1,5 +1,8 @@
 package com.github.datastructureandalgorithm.graph.chapter4;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CC {
 
     private int ccCount = 0; // 联通分量的个数
@@ -33,10 +36,36 @@ public class CC {
         }
     }
 
+    /**
+     * 返回联通分量的个数
+     *
+     * @return
+     */
     public int count() {
-        for (int e : visited)
-            System.out.print(e + " ");
-        System.out.println();
         return ccCount;
+    }
+
+    /**
+     * 判断顶点 v 和顶点 w 是否在同一个联通分量中
+     *
+     * @param v
+     * @param w
+     * @return
+     */
+    public boolean isConnected(int v, int w) {
+        G.validateVertex(v);
+        G.validateVertex(w);
+        return visited[v] == visited[w];
+    }
+
+    public List<Integer>[] components() {
+        List<Integer>[] res = new ArrayList[ccCount];
+        for (int i = 0; i < ccCount; i++)
+            res[i] = new ArrayList<>();
+
+        for (int v = 0; v < G.V(); v++)
+            res[visited[v]].add(v);
+
+        return res;
     }
 }
