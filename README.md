@@ -28,7 +28,11 @@ This is a Data Structure and Algorithm learning repo implements by Java
 |前缀树|[Trie.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/datastructure/Trie/Trie.java)|[11.前缀树](https://www.yuque.com/dobbykim/azx4gy/nhah3w)|
 ## 算法基础
 ## 图论算法
-
+|Chapter|Code|Document|
+|---|---|---|
+|第一章：图的基本表示|[邻接矩阵](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter2/AdjMatrix.java)|[1.图的基本表示](https://www.yuque.com/dobbykim/mgcvzi/udqfml)|
+|第一章：图的基本表示|[邻接表(LinkedList)](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter2/AdjList.java)|[1.图的基本表示](https://www.yuque.com/dobbykim/mgcvzi/udqfml)|
+|第一章：图的基本表示|[邻接表(TreeSet)](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter2/Graph.java)|[1.图的基本表示](https://www.yuque.com/dobbykim/mgcvzi/udqfml)|
 ## LeetCode 类型题整理
 |Tag|Problem|Difficulty|Official Solution|My Solution|
 |---|---|---|---|---|
