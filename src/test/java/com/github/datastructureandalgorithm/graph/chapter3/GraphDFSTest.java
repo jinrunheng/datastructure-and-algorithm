@@ -18,6 +18,7 @@ class GraphDFSTest {
     void testGraphDFS2(){
         Graph g = new Graph("/Users/macbook/Desktop/myProject/datastructure-and-algorithm/src/main/resources/graph/chapter3/g2.txt");
         GraphDFS dfs = new GraphDFS(g);
+        System.out.println(dfs.pre());
         System.out.println(dfs.post());
     }
 }
