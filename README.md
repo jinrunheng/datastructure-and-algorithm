@@ -33,6 +33,8 @@ This is a Data Structure and Algorithm learning repo implements by Java
 |图的基本表示|[邻接矩阵](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter2/AdjMatrix.java)|[1.图的基本表示](https://www.yuque.com/dobbykim/mgcvzi/udqfml)|
 |图的基本表示|[邻接表(LinkedList)](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter2/AdjList.java)|[1.图的基本表示](https://www.yuque.com/dobbykim/mgcvzi/udqfml)|
 |图的基本表示|[邻接表(TreeSet)](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter2/Graph.java)|[1.图的基本表示](https://www.yuque.com/dobbykim/mgcvzi/udqfml)|
+|图的深度优先遍历|[递归方式实现](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter3/GraphDFS.java)|[2.图的深度优先遍历](https://www.yuque.com/dobbykim/mgcvzi/mawql6)|
+|图的深度优先遍历|[非递归方式实现](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter3/GraphDFSnr.java)|[2.图的深度优先遍历](https://www.yuque.com/dobbykim/mgcvzi/mawql6)|
 ## LeetCode 类型题整理
 |Tag|Problem|Difficulty|Official Solution|My Solution|
 |---|---|---|---|---|
