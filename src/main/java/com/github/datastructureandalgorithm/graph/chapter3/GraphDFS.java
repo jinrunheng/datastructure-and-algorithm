@@ -12,7 +12,9 @@ public class GraphDFS {
     public GraphDFS(Graph G) {
         this.G = G;
         visited = new boolean[G.V()];
-        dfs(0);
+        for (int v = 0; v < G.V(); v++)
+            if (!visited[v])
+                dfs(v);
     }
 
     /**
