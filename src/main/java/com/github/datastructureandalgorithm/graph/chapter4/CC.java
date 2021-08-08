@@ -58,6 +58,11 @@ public class CC {
         return visited[v] == visited[w];
     }
 
+    /**
+     * 返回图的联通分量的顶点集合
+     *
+     * @return
+     */
     public List<Integer>[] components() {
         List<Integer>[] res = new ArrayList[ccCount];
         for (int i = 0; i < ccCount; i++)
