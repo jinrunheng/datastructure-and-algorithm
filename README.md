@@ -35,6 +35,14 @@ This is a Data Structure and Algorithm learning repo implements by Java
 |图的基本表示|[邻接表(TreeSet)](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter2/Graph.java)|[1.图的基本表示](https://www.yuque.com/dobbykim/mgcvzi/udqfml)|
 |图的深度优先遍历|[递归方式实现](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter3/GraphDFS.java)|[2.图的深度优先遍历](https://www.yuque.com/dobbykim/mgcvzi/mawql6)|
 |图的深度优先遍历|[非递归方式实现](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter3/GraphDFSnr.java)|[2.图的深度优先遍历](https://www.yuque.com/dobbykim/mgcvzi/mawql6)|
+|图的深度优先遍历的应用——求解联通分量|[CC.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter4/CC.java)|[3.图的深度优先遍历的应用](https://www.yuque.com/dobbykim/mgcvzi/gc3om2)|
+|图的深度优先遍历的应用——单源路径|[SingleSourcePath.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter4/SingleSourcePath.java)|[3.图的深度优先遍历的应用](https://www.yuque.com/dobbykim/mgcvzi/gc3om2)|
+|图的深度优先遍历的应用——所有点对路径|[AllPairsPath.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter4/AllPairsPath.java)|[3.图的深度优先遍历的应用](https://www.yuque.com/dobbykim/mgcvzi/gc3om2)|
+|图的深度优先遍历的应用——任意两点路径|[Path.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter4/Path.java)|[3.图的深度优先遍历的应用](https://www.yuque.com/dobbykim/mgcvzi/gc3om2)|
+|图的深度优先遍历的应用——无向图的环检测|[CycleDetection.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter4/CycleDetection.java)|[3.图的深度优先遍历的应用](https://www.yuque.com/dobbykim/mgcvzi/gc3om2)|
+|图的深度优先遍历的应用——检测图是否是一棵树|[GraphIsTree.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter4/GraphIsTree.java)|[3.图的深度优先遍历的应用](https://www.yuque.com/dobbykim/mgcvzi/gc3om2)|
+|图的深度优先遍历的应用——二分图检测|[BipartitionDetection.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter4/BipartitionDetection.java)|[3.图的深度优先遍历的应用](https://www.yuque.com/dobbykim/mgcvzi/gc3om2)|
+
 ## LeetCode 类型题整理
 |Tag|Problem|Difficulty|Official Solution|My Solution|
 |---|---|---|---|---|
