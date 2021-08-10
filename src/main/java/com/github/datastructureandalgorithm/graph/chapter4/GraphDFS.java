@@ -1,7 +1,5 @@
 package com.github.datastructureandalgorithm.graph.chapter4;
 
-import com.github.datastructureandalgorithm.graph.chapter3.Graph;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,7 +7,7 @@ public class GraphDFS {
     private List<Integer> pre = new ArrayList<>();
     private List<Integer> post = new ArrayList<>();
 
-    private com.github.datastructureandalgorithm.graph.chapter3.Graph G;
+    private Graph G;
     private boolean[] visited;
 
     public GraphDFS(Graph G) {

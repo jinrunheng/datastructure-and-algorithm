@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * 路径问题，从图中任意一个顶点 s 到另一个顶点 t 是否有可达的路径
+ */
 public class Path {
     private Graph G;
     private int s;
