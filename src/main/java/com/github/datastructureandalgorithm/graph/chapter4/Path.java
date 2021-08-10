@@ -1,27 +1,27 @@
 package com.github.datastructureandalgorithm.graph.chapter4;
 
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * 单源路径问题：从一个固定的源顶点 v 到图的另一个顶点 w 是否有可达的路径
- */
-public class SingleSourcePath {
-
+public class Path {
     private Graph G;
     private int s;
+    private int t;
     private boolean[] visited;
     private int[] pre;
 
-    public SingleSourcePath(Graph G, int s) {
+    public Path(Graph G, int s, int t) {
         G.validateVertex(s);
+        G.validateVertex(t);
 
         this.G = G;
         this.s = s;
+        this.t = t;
+
         visited = new boolean[G.V()];
         pre = new int[G.V()];
+
         for (int i = 0; i < pre.length; i++)
             pre[i] = -1;
 
@@ -35,36 +35,38 @@ public class SingleSourcePath {
      *
      * @param v
      */
-    private void dfs(int v, int parent) {
+    private boolean dfs(int v, int parent) {
         visited[v] = true;
         pre[v] = parent;
+
+        if (v == t) return true;
+
         for (int w : G.adj(v)) {
             if (!visited[w])
-                dfs(w, v);
+                if (dfs(w, v)) return true;
         }
+
+        return false;
     }
 
     /**
      * 判断 从源顶点 s 到 顶点 t 是否是可达的
      *
-     * @param t
      * @return
      */
-    public boolean isConnectedTo(int t) {
-        G.validateVertex(t);
+    public boolean isConnected() {
         return visited[t];
     }
 
     /**
      * 从源顶点 s 到顶点 t 的路径
      *
-     * @param t
      * @return
      */
-    public Iterable<Integer> path(int t) {
+    public Iterable<Integer> path() {
         List<Integer> res = new ArrayList<>();
         G.validateVertex(t);
-        if (!isConnectedTo(t))
+        if (!isConnected())
             return res;
 
         int cur = t;

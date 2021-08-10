@@ -1,7 +1,7 @@
 package com.github.datastructureandalgorithm.graph.chapter4;
 
 /**
- * 所有点对路径问题
+ * 所有点对路径问题，从图中任意一个顶点 v 到另一个顶点 w 是否有可达的路径
  */
 public class AllPairsPath {
 
