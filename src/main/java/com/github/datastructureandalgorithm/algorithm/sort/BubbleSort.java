@@ -7,7 +7,7 @@ public class BubbleSort {
     private BubbleSort(){}
 
     public static <T extends Comparable> void sort(T[] arr) {
-        if (arr == null || arr.length <= 1)
+        if (arr == null || arr.length < 2)
             return;
 
         for (int i = 0; i < arr.length - 1; i++)
