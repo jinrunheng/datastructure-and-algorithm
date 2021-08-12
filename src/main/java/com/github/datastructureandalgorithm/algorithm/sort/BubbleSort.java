@@ -4,9 +4,11 @@ import com.github.datastructureandalgorithm.algorithm.util.SwapUtils;
 
 public class BubbleSort {
 
-    private BubbleSort(){}
+    private BubbleSort() {
 
-    public static <T extends Comparable> void sort(T[] arr) {
+    }
+
+    public static <T extends Comparable<T>> void sort(T[] arr) {
         if (arr == null || arr.length < 2)
             return;
 

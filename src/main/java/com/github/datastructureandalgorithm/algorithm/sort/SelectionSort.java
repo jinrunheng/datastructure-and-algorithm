@@ -8,7 +8,7 @@ public class SelectionSort {
 
     }
 
-    public static<T extends Comparable> void sort(T[] arr) {
+    public static<T extends Comparable<T>> void sort(T[] arr) {
         if (arr == null || arr.length < 2)
             return;
 
