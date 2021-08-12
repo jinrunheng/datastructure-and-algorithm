@@ -31,6 +31,9 @@ This is a Data Structure and Algorithm learning repo implements by Java
 |---|---|---|
 |算法复杂度|[无代码]|[1.算法复杂度](https://www.yuque.com/dobbykim/kkc35z/ofxggm)|
 |线性查找法|[LinearSearch.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/algorithm/LinearSearch/LinearSearch.java)|[2.线性查找法](https://www.yuque.com/dobbykim/kkc35z/tbzrz8)|
+|排序算法——选择排序|[SelectionSort.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/algorithm/sort/SelectionSort.java)|[3.排序算法（一）](https://www.yuque.com/dobbykim/kkc35z/ezggmi)|
+|排序算法——冒泡排序|[BubbleSort.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/algorithm/sort/BubbleSort.java)|[3.排序算法（一）](https://www.yuque.com/dobbykim/kkc35z/ezggmi)|
+|排序算法——插入排序|[InsertionSort.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/algorithm/sort/InsertionSort.java)|[3.排序算法（一）](https://www.yuque.com/dobbykim/kkc35z/ezggmi)|
 ## 图论算法
 |Chapter|Code|Document|
 |---|---|---|
