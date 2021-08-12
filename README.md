@@ -30,7 +30,7 @@ This is a Data Structure and Algorithm learning repo implements by Java
 |Chapter|Code|Document|
 |---|---|---|
 |算法复杂度|[无代码]|[1.算法复杂度](https://www.yuque.com/dobbykim/kkc35z/ofxggm)|
-
+|线性查找法|[LinearSearch.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/algorithm/LinearSearch/LinearSearch.java)|[2.线性查找法](https://www.yuque.com/dobbykim/kkc35z/tbzrz8)|
 ## 图论算法
 |Chapter|Code|Document|
 |---|---|---|
