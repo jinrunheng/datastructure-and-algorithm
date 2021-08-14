@@ -22,6 +22,5 @@ class PathTest {
         Path path = new Path(g, 0, 1);
         Iterable<Integer> p = path.path();
         System.out.println("path 0->1 : " + p);
-
     }
 }
