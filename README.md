@@ -31,9 +31,9 @@ This is a Data Structure and Algorithm learning repo implements by Java
 |---|---|---|
 |算法复杂度|[无代码]|[1.算法复杂度](https://www.yuque.com/dobbykim/kkc35z/ofxggm)|
 |线性查找法|[LinearSearch.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/algorithm/LinearSearch/LinearSearch.java)|[2.线性查找法](https://www.yuque.com/dobbykim/kkc35z/tbzrz8)|
-|排序算法——选择排序|[SelectionSort.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/algorithm/sort/SelectionSort.java)|[3.排序算法（一）](https://www.yuque.com/dobbykim/kkc35z/ezggmi)|
-|排序算法——冒泡排序|[BubbleSort.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/algorithm/sort/BubbleSort.java)|[3.排序算法（一）](https://www.yuque.com/dobbykim/kkc35z/ezggmi)|
-|排序算法——插入排序|[InsertionSort.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/algorithm/sort/InsertionSort.java)|[3.排序算法（一）](https://www.yuque.com/dobbykim/kkc35z/ezggmi)|
+|排序算法——选择排序|[SelectionSort.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/algorithm/sort/SelectionSort.java)|[4.排序算法（一）](https://www.yuque.com/dobbykim/kkc35z/ezggmi)|
+|排序算法——冒泡排序|[BubbleSort.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/algorithm/sort/BubbleSort.java)|[4.排序算法（一）](https://www.yuque.com/dobbykim/kkc35z/ezggmi)|
+|排序算法——插入排序|[InsertionSort.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/algorithm/sort/InsertionSort.java)|[4.排序算法（一）](https://www.yuque.com/dobbykim/kkc35z/ezggmi)|
 ## 图论算法
 |Chapter|Code|Document|
 |---|---|---|
@@ -62,6 +62,7 @@ This is a Data Structure and Algorithm learning repo implements by Java
 ## LeetCode 类型题整理
 |Tag|Problem|Difficulty|Official Solution|My Solution|
 |---|---|---|---|---|
+|二分查找|[704. 二分查找](https://leetcode-cn.com/problems/binary-search/)|Easy|[官方题解](https://leetcode-cn.com/problems/binary-search/solution/er-fen-cha-zhao-by-leetcode/)|[code(递归写法)](https://github.com/jinrunheng/algorithm/blob/main/tags/binary-search/binary-search/Solution.java)|
 |双指针|[15. 三数之和](https://leetcode-cn.com/problems/3sum/)|Medium|[官方题解](https://leetcode-cn.com/problems/3sum/solution/san-shu-zhi-he-by-leetcode-solution/)|[我的题解](https://leetcode-cn.com/problems/3sum/solution/san-shu-zhi-he-by-dubykim-3el4/)|
 |栈|[20. 有效的括号](https://leetcode-cn.com/problems/valid-parentheses/)|Easy|[官方题解](https://leetcode-cn.com/problems/valid-parentheses/solution/you-xiao-de-gua-hao-by-leetcode-solution/)|[我的题解](https://github.com/jinrunheng/algorithm/blob/main/tags/stack/valid-parentheses/explanation.md)|
 |栈|[155. 最小栈](https://leetcode-cn.com/problems/min-stack/)|Easy|[官方题解](https://leetcode-cn.com/problems/min-stack/solution/zui-xiao-zhan-by-leetcode-solution/)|[我的题解](https://github.com/jinrunheng/algorithm/blob/main/tags/stack/min-stack/explanation.md)|
