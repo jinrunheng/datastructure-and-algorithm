@@ -19,19 +19,20 @@ public class Path {
         for (int i = 0; i < pre.length; i++)
             pre[i] = -1;
 
-        bfs(s);
+        bfs();
     }
 
     /**
      * 图的广度优先遍历
-     *
-     * @param s
      */
-    private boolean bfs(int s) {
+    private void bfs() {
         Queue<Integer> queue = new LinkedList<>();
         queue.offer(s);
         visited[s] = true;
         pre[s] = s;
+
+        // 如果起始点就是终止点，直接返回
+        if (s == t) return;
 
         while (!queue.isEmpty()) {
             int v = queue.poll();
@@ -41,10 +42,9 @@ public class Path {
                     queue.offer(w);
                     visited[w] = true;
                     pre[w] = v;
-                    if (w == t) return true;
+                    if (w == t) return;
                 }
         }
-        return false;
     }
 
     /**

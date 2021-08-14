@@ -19,9 +19,9 @@ class PathTest {
     @Test
     void path() {
         Graph g = new Graph("/Users/macbook/Desktop/myProject/datastructure-and-algorithm/src/main/resources/graph/chapter5/g2.txt");
-        Path path = new Path(g, 0, 6);
+        Path path = new Path(g, 0, 1);
         Iterable<Integer> p = path.path();
-        System.out.println("path 0->6 : " + p);
+        System.out.println("path 0->1 : " + p);
 
     }
 }
