@@ -63,6 +63,7 @@ This is a Data Structure and Algorithm learning repo implements by Java
 |Tag|Problem|Difficulty|Official Solution|My Solution|
 |---|---|---|---|---|
 |二分查找|[704. 二分查找](https://leetcode-cn.com/problems/binary-search/)|Easy|[官方题解](https://leetcode-cn.com/problems/binary-search/solution/er-fen-cha-zhao-by-leetcode/)|[code(递归写法)](https://github.com/jinrunheng/algorithm/blob/main/tags/binary-search/binary-search/Solution.java)|
+|二分查找|[704. 二分查找](https://leetcode-cn.com/problems/binary-search/)|Easy|[官方题解](https://leetcode-cn.com/problems/binary-search/solution/er-fen-cha-zhao-by-leetcode/)|[code(非递归写法)](https://github.com/jinrunheng/algorithm/blob/main/tags/binary-search/binary-search/Solution2.java)|
 |双指针|[15. 三数之和](https://leetcode-cn.com/problems/3sum/)|Medium|[官方题解](https://leetcode-cn.com/problems/3sum/solution/san-shu-zhi-he-by-leetcode-solution/)|[我的题解](https://leetcode-cn.com/problems/3sum/solution/san-shu-zhi-he-by-dubykim-3el4/)|
 |栈|[20. 有效的括号](https://leetcode-cn.com/problems/valid-parentheses/)|Easy|[官方题解](https://leetcode-cn.com/problems/valid-parentheses/solution/you-xiao-de-gua-hao-by-leetcode-solution/)|[我的题解](https://github.com/jinrunheng/algorithm/blob/main/tags/stack/valid-parentheses/explanation.md)|
 |栈|[155. 最小栈](https://leetcode-cn.com/problems/min-stack/)|Easy|[官方题解](https://leetcode-cn.com/problems/min-stack/solution/zui-xiao-zhan-by-leetcode-solution/)|[我的题解](https://github.com/jinrunheng/algorithm/blob/main/tags/stack/min-stack/explanation.md)|
