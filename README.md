@@ -59,6 +59,10 @@ This is a Data Structure and Algorithm learning repo implements by Java
 |无权图的最短路径——单源路径|[UnweightedSingleSourceShortestPath.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter5/UnweightedSingleSourceShortestPath.java)|[4.图的广度优先遍历](https://www.yuque.com/dobbykim/mgcvzi/grmtuk)|
 |无权图的最短路径——任意两点路径|[UnweightedShortestPath.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter5/UnweightedShortestPath.java)|[4.图的广度优先遍历](https://www.yuque.com/dobbykim/mgcvzi/grmtuk)|
 |图论问题建模和 FloodFill 算法|[无代码]|[5.图论问题建模和 FloodFill 算法](https://www.yuque.com/dobbykim/mgcvzi/ep6b09)|
+|图论搜索和人工智能|[无代码]|[6.图论搜索和人工智能](https://www.yuque.com/dobbykim/mgcvzi/cprgm2)|
+|Water Puzzle|[WaterPuzzle.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter7/WaterPuzzle.java)|[6.图论搜索和人工智能](https://www.yuque.com/dobbykim/mgcvzi/cprgm2)|
+|River Crossing Puzzle|[RiverCrossingPuzzle.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter7/RiverCrossingPuzzle.java)|[6.图论搜索和人工智能](https://www.yuque.com/dobbykim/mgcvzi/cprgm2)|
+
 ## LeetCode 类型题整理
 |Tag|Problem|Difficulty|Official Solution|My Solution|
 |---|---|---|---|---|
