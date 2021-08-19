@@ -12,4 +12,11 @@ class FindCutPointsTest {
         FindCutPoints fcp = new FindCutPoints(g);
         System.out.println(fcp.result());
     }
+
+    @Test
+    void result2(){
+        Graph g = new Graph("/Users/macbook/Desktop/myProject/datastructure-and-algorithm/src/main/resources/graph/chapter8/g2.txt");
+        FindCutPoints fcp = new FindCutPoints(g);
+        System.out.println(fcp.result());
+    }
 }
