@@ -62,6 +62,9 @@ This is a Data Structure and Algorithm learning repo implements by Java
 |图论搜索和人工智能|[无代码]|[6.图论搜索和人工智能](https://www.yuque.com/dobbykim/mgcvzi/cprgm2)|
 |Water Puzzle|[WaterPuzzle.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter7/WaterPuzzle.java)|[6.图论搜索和人工智能](https://www.yuque.com/dobbykim/mgcvzi/cprgm2)|
 |River Crossing Puzzle|[RiverCrossingPuzzle.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter7/RiverCrossingPuzzle.java)|[6.图论搜索和人工智能](https://www.yuque.com/dobbykim/mgcvzi/cprgm2)|
+|桥，割点以及图的遍历树木|[无代码]|[7.桥，割点以及图的遍历树](https://www.yuque.com/dobbykim/mgcvzi/rwvnul)|
+|寻找桥的算法|[FindBridges.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter8/FindBridges.java)|[7.桥，割点以及图的遍历树](https://www.yuque.com/dobbykim/mgcvzi/rwvnul)|
+|寻找割点的算法|[FindCutPoints.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter8/FindCutPoints.java)|[7.桥，割点以及图的遍历树](https://www.yuque.com/dobbykim/mgcvzi/rwvnul)|
 
 ## LeetCode 类型题整理
 |Tag|Problem|Difficulty|Official Solution|My Solution|
