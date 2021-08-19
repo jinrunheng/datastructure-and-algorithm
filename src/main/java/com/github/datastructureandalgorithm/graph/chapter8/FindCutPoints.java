@@ -1,6 +1,7 @@
 package com.github.datastructureandalgorithm.graph.chapter8;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 public class FindCutPoints {
@@ -10,14 +11,14 @@ public class FindCutPoints {
     private int[] ord;
     private int[] low;
     private int cnt;
-    private List<Integer> res;
+    private HashSet<Integer> res;
 
     public FindCutPoints(Graph G) {
         this.G = G;
         visited = new boolean[G.V()];
         ord = new int[G.V()];
         low = new int[G.V()];
-        res = new ArrayList<>();
+        res = new HashSet<>();
 
         for (int v = 0; v < G.V(); v++)
             if (!visited[v])
@@ -53,7 +54,7 @@ public class FindCutPoints {
         }
     }
 
-    public List<Integer> result() {
+    public HashSet<Integer> result() {
         return res;
     }
 }
