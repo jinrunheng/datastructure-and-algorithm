@@ -4,63 +4,61 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class HamiltonLoop {
-
+public class HamiltonPath {
     private Graph G;
+    private int s;
     private boolean[] visited;
     private int[] pre;
-    private int end; // end 表示 哈密尔顿回路是从 0 开始遍历到 end，end 是哈密尔顿回路的最后一个顶点
+    private int end;
+    private int left;
 
-    public HamiltonLoop(Graph G) {
+    public HamiltonPath(Graph G, int s) {
         this.G = G;
+        this.s = s;
         visited = new boolean[G.V()];
         pre = new int[G.V()];
         end = -1;
-        dfs(0, 0);
+        this.left = G.V();
+
+        dfs(s, s);
     }
 
-    /**
-     * 对图进行深度优先遍历
-     *
-     * @param v
-     */
     private boolean dfs(int v, int parent) {
         visited[v] = true;
         pre[v] = parent;
+        left--;
+
+        if (left == 0) {
+            end = v;
+            return true;
+        }
 
         for (int w : G.adj(v)) {
             if (!visited[w]) {
                 if (dfs(w, v)) return true;
-            } else if (w == 0 && allVisited()) {
-                end = v;
-                return true;
             }
         }
+
         visited[v] = false;
+        left++;
         return false;
     }
 
-    private boolean allVisited() {
-        for (boolean b : visited)
-            if (!b) return false;
-
-        return true;
-    }
-
     /**
-     * 获取哈密尔顿回路
+     * 返回哈密尔顿路径
      *
      * @return
      */
     public List<Integer> result() {
         List<Integer> res = new ArrayList<>();
         if (end == -1) return res;
+
         int cur = end;
-        while (cur != 0) {
+        while (cur != s) {
             res.add(cur);
             cur = pre[cur];
         }
-        res.add(0);
+        res.add(s);
         Collections.reverse(res);
         return res;
     }
