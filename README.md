@@ -65,6 +65,12 @@ This is a Data Structure and Algorithm learning repo implements by Java
 |桥，割点以及图的遍历树木|[无代码]|[7.桥，割点以及图的遍历树](https://www.yuque.com/dobbykim/mgcvzi/rwvnul)|
 |寻找桥的算法|[FindBridges.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter8/FindBridges.java)|[7.桥，割点以及图的遍历树](https://www.yuque.com/dobbykim/mgcvzi/rwvnul)|
 |寻找割点的算法|[FindCutPoints.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter8/FindCutPoints.java)|[7.桥，割点以及图的遍历树](https://www.yuque.com/dobbykim/mgcvzi/rwvnul)|
+|哈密尔顿问题和状态压缩|[无代码]|[8.哈密尔顿问题和状态压缩](https://www.yuque.com/dobbykim/mgcvzi/mwbboq)|
+|哈密尔顿回路算法|[HamiltonLoop.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter9/HamiltonLoop.java)|[8.哈密尔顿问题和状态压缩](https://www.yuque.com/dobbykim/mgcvzi/mwbboq)|
+|哈密尔顿路径算法|[HamiltonPath.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter9/HamiltonPath.java)|[8.哈密尔顿问题和状态压缩](https://www.yuque.com/dobbykim/mgcvzi/mwbboq)|
+|哈密尔顿回路算法+状态压缩|[HamiltonLoop_SR.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter9/HamiltonLoop_SR2.java)|[8.哈密尔顿问题和状态压缩](https://www.yuque.com/dobbykim/mgcvzi/mwbboq)|
+|哈密尔顿路径算法+状态压缩|[HamiltonPath_SR.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter9/HamiltonPath_SR.java)|[8.哈密尔顿问题和状态压缩](https://www.yuque.com/dobbykim/mgcvzi/mwbboq)|
+|记忆化搜索|[无代码]|[8.哈密尔顿问题和状态压缩](https://www.yuque.com/dobbykim/mgcvzi/mwbboq)|
 
 ## LeetCode 类型题整理
 |Tag|Problem|Difficulty|Official Solution|My Solution|
@@ -109,3 +115,4 @@ This is a Data Structure and Algorithm learning repo implements by Java
 |图论|[365. 水壶问题](https://leetcode-cn.com/problems/water-and-jug-problem/)|Medium|[官方题解](https://leetcode-cn.com/problems/water-and-jug-problem/solution/tu-de-yan-du-you-xian-bian-li-by-liweiwei1419/)|[我的题解](https://leetcode-cn.com/problems/water-and-jug-problem/solution/shui-hu-wen-ti-by-dubykim-anu9/)|
 |图论|[773. 滑动谜题](https://leetcode-cn.com/problems/sliding-puzzle/)|Hard|[官方题解](https://leetcode-cn.com/problems/sliding-puzzle/solution/hua-dong-mi-ti-by-leetcode-solution-q8dn/)|[我的题解](https://leetcode-cn.com/problems/sliding-puzzle/solution/hua-dong-mi-ti-by-dubykim-ek8k/)|
 |图论|[733. 图像渲染](https://leetcode-cn.com/problems/flood-fill/)|Easy|[官方题解](https://leetcode-cn.com/problems/flood-fill/solution/tu-xiang-xuan-ran-by-leetcode-solution/)|[我的题解](https://leetcode-cn.com/problems/flood-fill/solution/tu-xiang-xuan-ran-by-dubykim-8evi/)|
+|图论|[980. 不同路径 III](https://leetcode-cn.com/problems/unique-paths-iii/)|Hard|[官方题解](https://leetcode-cn.com/problems/unique-paths-iii/solution/bu-tong-lu-jing-iii-by-leetcode/)|[code(暂无题解)](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter9/Solution.java)|
