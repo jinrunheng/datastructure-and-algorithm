@@ -14,6 +14,7 @@ public class Prim {
         this.G = G;
         minimumSpanningTree = new ArrayList<>();
 
+        // 判断该图的联通分量是否为 1，如果大于 1 说明不存在最小生成树
         CC cc = new CC(G);
         if (cc.count() > 1) return;
 
@@ -40,6 +41,11 @@ public class Prim {
         }
     }
 
+    /**
+     * 返回最小生成树的结果集
+     *
+     * @return
+     */
     public List<WeightedEdge> result() {
         return minimumSpanningTree;
     }
