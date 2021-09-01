@@ -23,4 +23,16 @@ class HamiltonLoopTest {
         HamiltonLoop hamiltonLoop = new HamiltonLoop(g);
         System.out.println(hamiltonLoop.result());
     }
+
+    @Test
+    void result4(){
+        String path = "/Users/macbook/Desktop/myProject/datastructure-and-algorithm/src/main/resources/graph/chapter9/g4.txt";
+        System.out.println(new HamiltonLoop(new Graph(path)).result());
+    }
+
+    @Test
+    void result5(){
+        String path = "/Users/macbook/Desktop/myProject/datastructure-and-algorithm/src/main/resources/graph/chapter9/g5.txt";
+        System.out.println(new HamiltonLoop(new Graph(path)).result());
+    }
 }

@@ -19,4 +19,28 @@ class HamiltonPathTest {
         // 从 1 出发没有哈密尔顿路径
         System.out.println(hamiltonPath.result());
     }
+
+    @Test
+    void test1(){
+        String path = "/Users/macbook/Desktop/myProject/datastructure-and-algorithm/src/main/resources/graph/chapter9/g4.txt";
+        System.out.println(new HamiltonPath(new Graph(path), 0).result());
+    }
+
+    @Test
+    void test2(){
+        String path = "/Users/macbook/Desktop/myProject/datastructure-and-algorithm/src/main/resources/graph/chapter9/g5.txt";
+        System.out.println(new HamiltonPath(new Graph(path), 0).result());
+    }
+
+    @Test
+    void test3(){
+        String path = "/Users/macbook/Desktop/myProject/datastructure-and-algorithm/src/main/resources/graph/chapter9/g4.txt";
+        System.out.println(new HamiltonPath(new Graph(path), 2).result());
+    }
+
+    @Test
+    void test4(){
+        String path = "/Users/macbook/Desktop/myProject/datastructure-and-algorithm/src/main/resources/graph/chapter9/g5.txt";
+        System.out.println(new HamiltonPath(new Graph(path), 2).result());
+    }
 }
