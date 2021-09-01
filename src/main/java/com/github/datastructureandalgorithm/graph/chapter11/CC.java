@@ -1,10 +1,5 @@
 package com.github.datastructureandalgorithm.graph.chapter11;
 
-import com.github.datastructureandalgorithm.graph.chapter4.Graph;
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class CC {
 
     private WeightedGraph G;
@@ -44,5 +39,4 @@ public class CC {
     public int count() {
         return ccCount;
     }
-
 }

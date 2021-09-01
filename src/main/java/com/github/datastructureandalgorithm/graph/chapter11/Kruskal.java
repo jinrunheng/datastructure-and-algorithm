@@ -14,16 +14,17 @@ public class Kruskal {
         this.G = G;
         minimumSpanningTree = new ArrayList<>();
 
-        // 用户传入的图需要是联通的(联通分量个数为 1 )
         CC cc = new CC(G);
         if (cc.count() > 1) return;
 
         // Kruskal
         List<WeightedEdge> edges = new ArrayList<>();
+
         for (int v = 0; v < G.V(); v++)
             for (int w : G.adj(v))
                 if (v < w)
                     edges.add(new WeightedEdge(v, w, G.getWeight(v, w)));
+
         Collections.sort(edges);
         UnionFind unionFind = new UnionFind(G.V());
         for (WeightedEdge edge : edges) {
@@ -37,7 +38,7 @@ public class Kruskal {
     }
 
     /**
-     * 返回最小生成树
+     * 返回最小生成树的结果集
      *
      * @return
      */

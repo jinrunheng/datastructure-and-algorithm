@@ -19,6 +19,10 @@ public class WeightedEdge implements Comparable<WeightedEdge> {
         return w;
     }
 
+    public int getWeight() {
+        return weight;
+    }
+
     @Override
     public String toString() {
         return String.format("(%d-%d：%d)", v, w, weight);
