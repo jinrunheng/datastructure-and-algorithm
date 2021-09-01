@@ -71,6 +71,9 @@ This is a Data Structure and Algorithm learning repo implements by Java
 |哈密尔顿回路算法+状态压缩|[HamiltonLoop_SR.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter9/HamiltonLoop_SR2.java)|[8.哈密尔顿问题和状态压缩](https://www.yuque.com/dobbykim/mgcvzi/mwbboq)|
 |哈密尔顿路径算法+状态压缩|[HamiltonPath_SR.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter9/HamiltonPath_SR.java)|[8.哈密尔顿问题和状态压缩](https://www.yuque.com/dobbykim/mgcvzi/mwbboq)|
 |记忆化搜索|[无代码]|[8.哈密尔顿问题和状态压缩](https://www.yuque.com/dobbykim/mgcvzi/mwbboq)|
+|无向带权图的实现|[WeightedGraph.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter11/WeightedGraph.java)|[10.Kruskal 算法与 Prim 算法](https://www.yuque.com/dobbykim/mgcvzi/opbgm3)|
+|Kruskal 算法|[Kruskal.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter11/Kruskal.java)|[10.Kruskal 算法与 Prim 算法](https://www.yuque.com/dobbykim/mgcvzi/opbgm3)|
+|Prim 算法|[Prim.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter11/Prim.java)|[10.Kruskal 算法与 Prim 算法](https://www.yuque.com/dobbykim/mgcvzi/opbgm3)|
 
 ## LeetCode 类型题整理
 |Tag|Problem|Difficulty|Official Solution|My Solution|
