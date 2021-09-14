@@ -1,6 +1,6 @@
 package com.github.datastructureandalgorithm.datastructure.AVL;
 
-public class Node<E> {
+public class Node<E extends Comparable<E>> {
     public E e;
     public Node left;
     public Node right;

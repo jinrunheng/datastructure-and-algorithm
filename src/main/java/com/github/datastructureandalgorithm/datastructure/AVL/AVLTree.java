@@ -84,7 +84,6 @@ public class AVLTree<E extends Comparable<E>> {
         int balanceFactor = getBalanceFactor(node);
 
         // 平衡的维护
-
         // LL
         if (balanceFactor > 1 && getBalanceFactor(node.left) >= 0)
             return rightRotate(node);
@@ -315,7 +314,7 @@ public class AVLTree<E extends Comparable<E>> {
                 successor.right = right;
                 node.left = null;
                 node.right = null;
-                return successor;
+                retNode = successor;
             }
         }
 
