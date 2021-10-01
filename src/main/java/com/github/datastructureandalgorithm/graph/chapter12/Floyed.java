@@ -3,7 +3,6 @@ package com.github.datastructureandalgorithm.graph.chapter12;
 import java.util.Arrays;
 
 public class Floyed {
-
     private WeightedGraph G;
     private int[][] dis;
     public boolean hasNegativeCycle = false;
