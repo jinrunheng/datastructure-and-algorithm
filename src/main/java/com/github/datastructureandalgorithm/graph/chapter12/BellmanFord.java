@@ -6,7 +6,7 @@ public class BellmanFord {
     private WeightedGraph G;
     private int s;
     private int[] dis;
-    private boolean hasNegativeCycle = false;
+    public boolean hasNegativeCycle = false;
 
     public BellmanFord(WeightedGraph G, int s) {
         this.G = G;
