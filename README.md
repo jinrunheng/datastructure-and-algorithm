@@ -76,6 +76,12 @@ This is a Data Structure and Algorithm learning repo implements by Java
 |无向带权图的实现|[WeightedGraph.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter11/WeightedGraph.java)|[10.Kruskal 算法与 Prim 算法](https://www.yuque.com/dobbykim/mgcvzi/opbgm3)|
 |Kruskal 算法|[Kruskal.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter11/Kruskal.java)|[10.Kruskal 算法与 Prim 算法](https://www.yuque.com/dobbykim/mgcvzi/opbgm3)|
 |Prim 算法|[Prim.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter11/Prim.java)|[10.Kruskal 算法与 Prim 算法](https://www.yuque.com/dobbykim/mgcvzi/opbgm3)|
+|Dijkstra 算法|[Dijkstra.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter12/Dijkstra.java)|[缺]|
+|Dijkstra 算法|[Dijkstra_2.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter12/Dijkstra_2.java)|[缺]|
+|Dijkstra 算法|[Dijkstra_3.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter12/Dijkstra_3.java)|[缺]|
+|BellmanFord 算法|[BellmanFord.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter12/BellmanFord.java)|[缺]|
+|BellmanFord 算法|[BellmanFord_2.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter12/BellmanFord_2.java)|[缺]|
+|Floyed 算法|[Floyed.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/graph/chapter12/Floyed.java)|[缺]|
 
 ## LeetCode 类型题整理
 |Tag|Problem|Difficulty|Official Solution|My Solution|
