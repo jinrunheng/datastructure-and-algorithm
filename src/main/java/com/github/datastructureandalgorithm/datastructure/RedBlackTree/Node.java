@@ -6,13 +6,12 @@ public class Node<E> {
     public Node left;
     public Node right;
     public boolean color;
-    private static final boolean RED = true;
-    private static final boolean BLACK = false;
+
 
     public Node(E e) {
         this.e = e;
         left = null;
         right = null;
-        color = RED;
+        color = true; // true 表示红色，false 表示黑色
     }
 }
