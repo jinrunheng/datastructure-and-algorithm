@@ -28,6 +28,7 @@ This is a Data Structure and Algorithm learning repo implements by Java
 |前缀树|[Trie.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/datastructure/Trie/Trie.java)|[11.前缀树](https://www.yuque.com/dobbykim/azx4gy/nhah3w)|
 |并查集|[缺]|[缺]|
 |AVL|[AVLTree.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/datastructure/AVL/AVLTree.java)|[13. AVL 树](https://www.yuque.com/dobbykim/azx4gy/awvc16)|
+|红黑树|[RBTree.java](https://github.com/jinrunheng/datastructure-and-algorithm/blob/main/src/main/java/com/github/datastructureandalgorithm/datastructure/RedBlackTree/RBTree.java)|[14. 红黑树](https://www.yuque.com/dobbykim/azx4gy/ifo3gg)|
 ## 算法基础
 |Chapter|Code|Document|
 |---|---|---|
