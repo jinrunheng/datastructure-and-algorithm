@@ -35,7 +35,7 @@ public class RBTree<E extends Comparable<E>> {
     }
 
     /**
-     * @return 返回二分搜索树的根节点
+     * @return 返回红黑树的根节点
      */
     public Node getRoot() {
         return root;
@@ -63,6 +63,7 @@ public class RBTree<E extends Comparable<E>> {
 
         return x;
     }
+
     /**
      * 右旋转:
      *
@@ -91,6 +92,7 @@ public class RBTree<E extends Comparable<E>> {
         node.left.color = BLACK;
         node.right.color = BLACK;
     }
+
     /**
      * @param e 向红黑树中添加新的元素
      */
@@ -100,9 +102,9 @@ public class RBTree<E extends Comparable<E>> {
     }
 
     /**
-     * @param e    向二分搜索树中新插入的节点
+     * @param e    向红黑树中新插入的节点
      * @param node 当前比较的节点
-     * @return 返回二分搜索树的根节点
+     * @return 返回红黑树的根节点
      */
     private Node add(E e, Node node) {
         if (node == null) {
@@ -126,7 +128,7 @@ public class RBTree<E extends Comparable<E>> {
 
     /**
      * @param e 查找的元素 e
-     * @return 返回当前二分搜索树中是否包含元素 e
+     * @return 返回当前红黑树中是否包含元素 e
      */
     public boolean contains(E e) {
         return contains(e, root);
