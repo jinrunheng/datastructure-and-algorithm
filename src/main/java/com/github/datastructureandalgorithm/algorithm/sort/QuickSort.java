@@ -2,34 +2,43 @@ package com.github.datastructureandalgorithm.algorithm.sort;
 
 import com.github.datastructureandalgorithm.algorithm.util.SwapUtils;
 
+import java.util.Random;
+
+import static com.github.datastructureandalgorithm.algorithm.util.SwapUtils.swap;
+
 public class QuickSort {
     public static void sort(int[] arr) {
-        sort(arr, 0, arr.length - 1);
+        if (arr == null || arr.length < 2) {
+            return;
+        }
+        quickSort(arr, 0, arr.length - 1);
     }
 
-    private static void sort(int[] arr, int l, int r) {
+    public static void quickSort(int[] arr, int l, int r) {
         if (l < r) {
-            // 让任意位置的数与基准数arr[r]调换,保证算法的随机性
-            SwapUtils.swap(arr, l + (int) ((r - l + 1) * Math.random()), r);
-            int[] t = partition(arr, l, r);
-            sort(arr, l, t[0] - 1);
-            sort(arr, t[1] + 1, r);
+            // 改进的部分，让原本固定在最后的partition划分值 变成了随机位置
+            swap(arr, r, l + new Random().nextInt(r - l + 1));
+            int[] p = partition(arr, l, r);
+            quickSort(arr, l, p[0] - 1);
+            quickSort(arr, p[0] + 1, r);
         }
     }
 
-    private static int[] partition(int[] arr, int l, int r) {
-        int p1 = l - 1;
-        int p2 = r;
+    public static int[] partition(int[] arr, int l, int r) {
         int cur = l;
-        while (cur < p2) {
-            if (arr[cur] < arr[r])
-                SwapUtils.swap(arr, cur++, ++p1);
-            else if (arr[cur] > arr[r])
-                SwapUtils.swap(arr, cur, --p2);
-            else
+        int less = l - 1;
+        int more = r;
+        // 每次都以arr[r]作为partition的划分值
+        while (cur < more) {
+            if (arr[cur] < arr[r]) {
+                swap(arr, ++less, cur++);
+            } else if (arr[cur] > arr[r]) {
+                swap(arr, --more, cur);
+            } else {
                 cur++;
+            }
         }
-        SwapUtils.swap(arr, p2, r);
-        return new int[]{++p1, --p2};
+        swap(arr, more, r);
+        return new int[]{less + 1, more};
     }
 }
