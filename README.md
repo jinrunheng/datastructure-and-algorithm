@@ -91,6 +91,7 @@ This is a Data Structure and Algorithm learning repo implements by Java
 ## LeetCode 类型题整理
 |Tag|Problem|Difficulty|Official Solution|My Solution|
 |---|---|---|---|---|
+|计数|[1010. 总持续时间可被 60 整除的歌曲](https://leetcode.cn/problems/pairs-of-songs-with-total-durations-divisible-by-60/)|Medium|[官方题解](https://leetcode.cn/problems/pairs-of-songs-with-total-durations-divisible-by-60/solution/zong-chi-xu-shi-jian-ke-bei-60-zheng-chu-42cu/)|[code(暂无题解)](https://github.com/jinrunheng/leetcode-daily/blob/main/src/main/java/com/github/leetcodedaily/pairs_of_songs_with_total_durations_divisible_by_60/Solution.java)|
 |二分查找|[704. 二分查找](https://leetcode-cn.com/problems/binary-search/)|Easy|[官方题解](https://leetcode-cn.com/problems/binary-search/solution/er-fen-cha-zhao-by-leetcode/)|[code(递归写法)](https://github.com/jinrunheng/algorithm/blob/main/tags/binary-search/binary-search/Solution.java)|
 |二分查找|[704. 二分查找](https://leetcode-cn.com/problems/binary-search/)|Easy|[官方题解](https://leetcode-cn.com/problems/binary-search/solution/er-fen-cha-zhao-by-leetcode/)|[code(非递归写法)](https://github.com/jinrunheng/algorithm/blob/main/tags/binary-search/binary-search/Solution2.java)|
 |二分查找|[875. 爱吃香蕉的珂珂](https://leetcode.cn/problems/koko-eating-bananas/)|Medium|[官方题解](https://leetcode.cn/problems/koko-eating-bananas/solution/ai-chi-xiang-jiao-de-ke-ke-by-leetcode-s-z4rt/)|[我的题解...待完成]()|
